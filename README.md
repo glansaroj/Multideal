@@ -46,7 +46,7 @@
 ## MultiDeal: multivendor E-commerce platform
 
 
-MultiDeal, a multivendor E-commerce platform (project) powered with MERN stack, is all in one online shopping place where customer can buy various products from different vendors/shops. It's supposed to be act as a central saleshub for shop owners/vendors in which they can easily showcase their products to their's client digitally & more conveninet way.
+MultiDeal, a multivendor E-commerce platform (project) powered with MERN stack, is all in one online shopping place where customers can buy various products from different vendors/shops. It's supposed to act as a central sales hub for shop owners/vendors in which they can easily showcase their products to their clients digitally  & in a more convenient way.
 
 
 
@@ -55,7 +55,7 @@ MultiDeal, a multivendor E-commerce platform (project) powered with MERN stack, 
 
 ## Tech-stack 
 
-While crafting this project, I'll be using range of really cool modern tech-stacks which really excite me the most. Tech-stacks that will be used in this projects as as follows:
+While crafting this project, I'll be using a wide range of awesome & cool modern tech-stacks which really excite me the most. Tech-stacks that will be used in this project are as follows:
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
@@ -66,7 +66,7 @@ While crafting this project, I'll be using range of really cool modern tech-stac
 * Tailwind CSS
 * Material UI
 * Material Design
-* Formik & Yup for Form Validation in React
+* Formik & Yup for Form Validation
 * MongoDB/Mongoose
 * Node JS/Express
 * Many more ...
@@ -96,7 +96,7 @@ While crafting this project, I'll be using range of really cool modern tech-stac
     - [ ] Flowchart / Diagram
 
 
-- [ ] III. UI & layout
+- [ ] III. UI & Layout
     - [ ] Header
     - [ ] Navigation bar
     - [ ] Hero section 
@@ -123,7 +123,7 @@ While crafting this project, I'll be using range of really cool modern tech-stac
     - [ ] User account pages
 
 - [ ] II. Extra features & functionality:
-     - [ ] Add/delete items  in cart 
+     - [ ] Add/delete items in cart 
      - [ ] Add/Delete items in a wishlist
      - [ ] pagination
      - [ ] Product search functionality
@@ -141,8 +141,6 @@ While crafting this project, I'll be using range of really cool modern tech-stac
 ### (3) Testing 
 
 ### (4) Deployment
-
-
 
 
 
@@ -185,17 +183,6 @@ _Below is an example of how you can instruct your audience on installing and set
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 <!-- LICENSE -->
 ## License
 
@@ -206,10 +193,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 ## Contact
+Have any doubts/queries & feedback regarding this project? <br>
+  Leave your message here 👇
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - sarojt7475@gmail.com
+Saroj Tamang - sarojt7475@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: - [MultiDeal: multivendor E-commerce platform](https://github.com/trulysaroj/Multideal)
 
 
 
