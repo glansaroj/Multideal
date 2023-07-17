@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://github.com/trulysaroj/MultiDeal/blob/master/Git%20banner.png" alt="Logo">
+    <img src="https://github.com/trulysaroj/Multideal/blob/master/Project%20banner.png" alt="Logo">
   </a>
 
 
@@ -59,17 +59,28 @@ While crafting this project, I'll be using a wide range of awesome & cool modern
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
-
+* Next JS
 * React JS
 * Redux
-* Next JS
 * Tailwind CSS
 * Material UI
 * Material Design
 * Formik & Yup for Form Validation
 * MongoDB/Mongoose
 * Node JS/Express
-* Many more ...
+* & Many more ...
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -80,6 +91,7 @@ While crafting this project, I'll be using a wide range of awesome & cool modern
 
 <!-- ROADMAP -->
 ## Roadmap & Features checklist
+Here is my ideal roadmap & features checklist for completing this project in a more organized and efficient way.
 
 ### (1) Design
 
@@ -167,7 +179,7 @@ _Below is an example of how you can instruct your audience on installing and set
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/trulysaroj/Multideal
    ```
 3. Install NPM packages
    ```sh
@@ -228,3 +240,5 @@ Project Link: - [MultiDeal: multivendor E-commerce platform](https://github.com/
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+
+
