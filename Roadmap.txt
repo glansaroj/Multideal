@@ -1,0 +1,59 @@
+(1)Design
+
+- [ ] Brand indetity/color scheme & typography 
+  - project name
+  - Primary & accent colors
+  - Fonts and typo
+
+- [ ] Design key elements 
+  - Logo
+  - Buttons
+  - Forms
+  - wireframes and mockups
+  - Flowchart / Diagram
+
+
+- [ ] UI & layout
+  - Header
+  - Navigation bar
+  - Hero section 
+  - Main content area
+  - Sidebar
+  - Footer
+
+
+
+(2) Development
+
+ I.Front-End Development:
+
+- [ ] Structure, Pages & navigation 
+  - Home page
+  - Login/signup pages
+  - vendor/ shop listing form
+  - Product listing pages
+  - Product detail pages
+  - product categories 
+  - Shopping cart
+  - Wishlist 
+  - Checkout process
+  - User account pages
+
+- [ ] Extra features & functionality:
+   - Add/delete item  in cart 
+   - Add/Delete item in wishlist
+   - pagination
+   - Product search functionality
+   - product listing & deleteting 
+   - user rating & feedback
+   - Filtering & sorting by price,brand etc.
+   - basic stock mgt
+   - proceed to checkout 
+
+ II.Back-End Development:
+
+
+
+
+-
+

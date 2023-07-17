@@ -1,0 +1,7 @@
+
+
+{
+    "MONGODB_DATABASE": "multivendorDB",
+    "MONGODB_CONNECTION_url": "mongodb://localhost:27017"
+
+}
