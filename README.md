@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://github.com/trulysaroj/MultiDeal/blob/master/Git%20banner.png" alt="Logo">
+    <img src="Project banner.png" alt="Logo">
   </a>
 
 
@@ -205,7 +205,6 @@ Project Link: - [MultiDeal: multivendor E-commerce platform](https://github.com/
 
 
 <!-- ACKNOWLEDGMENTS -->
-
 
 
 
