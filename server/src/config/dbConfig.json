@@ -1,8 +1,9 @@
 
 
 {
-    "MONGODB_DATABASE": "multivendorDB",
-    "MONGODB_CONNECTION_URL": "mongodb://localhost:27017"
-
+    "MONGODB_DATABASE_NAME": "multiDealDB", 
+    "MONGODB_CONNECTION_URI": "mongodb://127.0.0.1:27017" 
+    
 }
 
+ 
