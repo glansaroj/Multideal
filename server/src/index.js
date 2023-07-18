@@ -1,8 +1,6 @@
 
-const { Schema } = mongoose;
-mongoose.connect('mongodb://localhost:27017/muliVendorDb');
 
-// //////////////////////////////////////////
+// //////no////////////////////////////////////
 
 const express = require('express')
 require('dotenv').config()
