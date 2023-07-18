@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://github.com/trulysaroj/MultiDeal/blob/master/Git%20banner.png" alt="Logo">
+    <img src="https://github.com/trulysaroj/Multideal/blob/master/Project%20banner.png" alt="Logo">
   </a>
 
 
@@ -102,8 +102,8 @@ Here is my ideal roadmap & features checklist for completing this project in a m
 
 - [ ] II. Design key elements 
     - [X] Logo
-    - [ ] Buttons
-    - [ ] Forms
+    - [X] Buttons
+    - [X] Forms
     - [ ] wireframes and mockups
     - [ ] Flowchart / Diagram
 
