@@ -13,8 +13,8 @@ const Login = () => {
     <>
       <div className="container  bg-gray-100 text-gray-900 flex flex-row min-h-screen justify-center items-center">
         <div className="app--login mt-12 flex flex-col text-gray-800 text-left items-center">
-        <h1 class="text-2xl xl:text-3xl font-bold">
-            Login to your account
+        <h1 class="text-2xl xl:text-3xl font-bold mb-3">
+            Customer Login
           </h1>
           <Formik
             initialValues={{
@@ -28,7 +28,7 @@ const Login = () => {
             }}
           >
             {({ errors, touched }) => (
-              <Form>
+              <Form className="h-5/6 w-5/6 bg-gray-200 bg-opacity-30 rounded-md shadow-md py-16 px-6 mb-20">
 
                 <Field className="w-full px-8 py-4 mt-12 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white" name="phoneNumber" placeholder="Email" />
                 {errors.phoneNumber && touched.phoneNumber ? (
@@ -72,7 +72,7 @@ const Login = () => {
 
             {/* google */}
             <button
-                class="w-full max-w-xs font-bold shadow-sm rounded-lg py-4 bg-gray-200  text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
+                class="w-96  -mt-2 font-bold shadow-sm rounded-lg py-3 bg-gray-200  text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
               >
                 <div class="bg-white p-2 rounded-full">
                   <svg class="w-4" viewBox="0 0 533.5 544.3">
