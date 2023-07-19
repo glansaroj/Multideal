@@ -1,3 +1,9 @@
+// Module import
+import React from "react";
+import { Formik, Form, Field } from "formik";
+import * as Yup from "yup";
+import Link from "next/link";
+import Register from "./auth/Login/register";
 
 const Login = () => {
   const LoginSchema = Yup.object().shape({
@@ -110,3 +116,12 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
+
+
+
+
+
+
