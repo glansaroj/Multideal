@@ -104,13 +104,13 @@ Here is my ideal roadmap & features checklist for completing this project in a m
     - [X] Logo
     - [X] Buttons
     - [X] Forms
-    - [ ] wireframes and mockups
+    - [X] wireframes and mockups
     - [ ] Flowchart / Diagram
 
 
 - [ ] III. UI & Layout
-    - [ ] Header
-    - [ ] Navigation bar
+    - [X] Header
+    - [X] Navigation bar
     - [ ] Hero section 
     - [ ]  Main content area
     - [ ] Sidebar
@@ -123,8 +123,8 @@ Here is my ideal roadmap & features checklist for completing this project in a m
  #### (Front-End Development)
 
 - [ ] I. Structure, Pages & navigation 
-    - [ ] Home page
-    - [ ] Login/signup pages
+    - [X] Home page
+    - [X] Login/signup pages
     - [ ] vendor/ shop listing form
     - [ ] Product listing pages
     - [ ] Product detail pages
