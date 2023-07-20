@@ -3,6 +3,12 @@ import Router from 'next/router';
 import Header from '@/components/Header/Header';
 
 
+import { Formik, Form, Field } from "formik";
+import * as Yup from "yup";
+import Link from "next/link";
+import Navbar from '@/components/Header/Navbar';
+import Login from './auth/Login/login';
+
 
 
 
@@ -19,15 +25,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header className=' h-9 w-5 bg-yellow-500' />
+      <Header />
+      <Navbar />
+
+
+
+      <Login />
+
 
       
+
+
 
 
       
     </>
   )
 }
+
 
 
 
