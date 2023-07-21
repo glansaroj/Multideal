@@ -9,24 +9,23 @@ const Login = () => {
   // Login Schema
   const LoginSchema = Yup.object().shape({
     email: Yup.string()
+
       // Format Validation
       .email("Invalid email address")
-       // Required Field Validation
-      .required("Email required")
+      // Required Field Validation
+      .required("Email is a required field")
 
-      .min(2, "Must be more than 8 characters"),
+      .min(5, "Must be more than 8 characters"),
 
-      // Error messages 
-      // .matches('@', "Must include @ !"),
+    // Error messages
+    // .matches('@', "Must include @ !"),
 
-      password: Yup.string()
-      .required("Please enter a password")
+    password: Yup.string()
+      .required("Password is a required field")
       // check minimum characters
       .min(8, "Password must have at least 8 characters")
-      // Error messages for different requirements
-      .matches(/[0-9]/, "Must include a digit!")
-      .matches(/[a-z]/, "Must include a lowercase character!")
-      .matches(/[A-Z]/, "Must include a uppercase character!"),
+      // Error messages for requirements
+      .matches(/[0-9]/, "Must include a digit!"),
   });
 
   return (
@@ -47,13 +46,17 @@ const Login = () => {
             }}
           >
             {({ errors, touched }) => (
-              <Form className="h-5/6 w-5/6  bg-gray-200 bg-opacity-30 rounded-md border shadow-lg py-16 px-7 mb-20">
+              <Form className="h-5/6 w-11/12  bg-gray-200 bg-opacity-30 rounded-md border shadow-lg py-20 px-9 mb-20">
                 <Field
                   className="w-full px-8 py-4 -mt-2 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
-                  name="Email"
+                  name="email"
                   placeholder="Email"
                 />
-                {errors.email && touched.email ? <div className="mt-1 text-xs text-red-400">{errors.email}</div> : null}
+                {errors.email && touched.email ? (
+                  <div className="mt-1 text-xs text-red-400">
+                    {errors.email}
+                  </div>
+                ) : null}
 
                 <Field
                   className="w-full px-8 py-4 focus:border-yellow-500 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:bg-white mt-8"
@@ -93,7 +96,7 @@ const Login = () => {
                 </div>
 
                 {/* google */}
-                <button class="w-96  -mt-2 font-bold shadow-sm rounded-lg py-3 bg-gray-200  text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline">
+                <button class="w-full  -mt-2 font-bold shadow-sm rounded-lg py-3 bg-gray-200  text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline">
                   <div class="bg-white p-2 rounded-full">
                     <svg class="w-4" viewBox="0 0 533.5 544.3">
                       <path
@@ -121,7 +124,7 @@ const Login = () => {
                   Don't have an account yet?{" "}
                   <Link
                     className="ml-1 text-slate-800 font-medium"
-                    href="/register"
+                    href="/Register"
                   >
                     Sign up{" "}
                   </Link>

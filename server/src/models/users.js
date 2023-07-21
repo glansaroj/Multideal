@@ -2,6 +2,8 @@
 
 // User Schemas:
 const mongoose = require('mongoose');
+const { Schema } = mongoose;
+
 
 const userSchema = new mongoose.Schema({
     fullName: {type:String, required: true}, // String is shorthand for {type: String}
@@ -16,7 +18,9 @@ const userSchema = new mongoose.Schema({
   module.exports = Users
 
 
-  
+
+
+/////////////////////////////////////////////////////////////////////
 
 // Product schema
 // const productSchema = new Schema({

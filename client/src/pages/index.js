@@ -7,7 +7,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
 import Navbar from '@/components/Header/Navbar';
-import Login from './auth/Login/login';
+import Login from './auth/Login';
 
 
 
