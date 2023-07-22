@@ -2,14 +2,19 @@ import React from "react";
 import Search from "./Search";
 import Head from "next/head";
 import Link from "next/link";
+// import Wishlist from "./Wishlist";
 //
 import { AiOutlineUser } from "react-icons/ai";
+import { HeartOutlined } from "react-icons/ai";
+import { ShoppingCartOutlined } from "react-icons/ai";
+
 import Register from "@/pages/auth/Register";
 import Login from "@/pages/auth/Login";
 
 import Navbar from "./Navbar";
 // import Logo from '/client/public/MDlogo.png'
 import Image from "next/image";
+
 
 function Header() {
   return (
@@ -27,11 +32,22 @@ function Header() {
         </a>
       </div>
 
-      <div className="mr-80">
+      <div className="search mr-80">
         <Search />
       </div>
 
-      <div className="text-white mr-12 text-sm  gap-2 flex items-center">
+
+      {/* WISH LIST & CART */}
+
+      <div className="text-white">
+        Wish List
+      
+      </div>
+
+
+    
+
+      <div className="userlogin text-white mr-12 text-sm  gap-2 flex items-center">
 
         <div className="text-4xl font-medium">
           <AiOutlineUser />

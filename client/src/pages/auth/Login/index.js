@@ -46,7 +46,7 @@ const Login = () => {
             }}
           >
             {({ errors, touched }) => (
-              <Form className="h-5/6 w-11/12  bg-gray-200 bg-opacity-30 rounded-md border shadow-lg py-20 px-9 mb-20">
+              <Form className="h-5/6 w-[550px]  bg-gray-200 bg-opacity-30 rounded-md border shadow-lg py-20 px-12 mb-20">
                 <Field
                   className="w-full px-8 py-4 -mt-2 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
                   name="email"
@@ -123,8 +123,8 @@ const Login = () => {
                 <p className="text-center mt-7 text-gray-500">
                   Don't have an account yet?{" "}
                   <Link
-                    className="ml-1 text-slate-800 font-medium"
-                    href="/Register"
+                    className="ml-1 text-yellow-500 font-medium"
+                    href={"/auth/Register"}
                   >
                     Sign up{" "}
                   </Link>

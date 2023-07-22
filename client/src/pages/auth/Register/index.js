@@ -38,7 +38,7 @@ const Register = () => {
      <Navbar />
 
       <div className="container  bg-gray-100 text-gray-900 flex flex-row min-h-screen  w-full justify-center items-center">
-        <div className="app--login mt-12 flex flex-col text-gray-800 text-left items-center">
+        <div className="app--login mt-12 flex flex-col text-gray-800 text-left justify-center items-center">
           <h1 className="text-2xl xl:text-3xl font-bold mb-3">
             Create a new Account
           </h1>
@@ -54,12 +54,12 @@ const Register = () => {
             }}
           >
             {({ errors, touched }) => (
-              <Form className="h-5/6 w-5/6 bg-gray-200 bg-opacity-30 rounded-md shadow-md py-16 my-3 px-6 mb-20">
+              <Form className="h-5/6 w-[550px] bg-gray-200 bg-opacity-30 rounded-md shadow-md py-10 my-3 px-12 mb-20">
                 {/* <label for="firstName">First Name*</label> */}
                 <Field
-                  className="w-full px-8 py-4 -mt-4 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
+                  className="w-full px-8 py-4 mt-3 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
                   name="FullName"
-                  placeholder="Your full Name"
+                  placeholder="Full Name"
                 />
                 {errors.FullName && touched.FullName ? (
                   <div className="mt-1 text-xs text-red-400">{errors.FullName}</div>
@@ -68,7 +68,7 @@ const Register = () => {
               
 
                 <Field
-                  className="w-full px-8 py-4 mt-1 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
+                  className="w-full px-8 py-4 mt-8 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
                   name="email"
                   placeholder="Email"
                 />
@@ -104,11 +104,26 @@ const Register = () => {
                   </div>
                 ) : null}
 
+                <div class="mt-4 flex items-center accent-gray-800 text-gray-500">
+                  <input
+                    type="checkbox"
+                    id="remember"
+                    name="remember"
+                    className="mr-3"
+                  />
+                  <label className="text-sm mt-1 " for="remember">
+                    
+                    <p>I agree to <Link className="underline" href={''}> Terms & conditions</Link> </p>
+                  </label>
+
+                  </div>
+
+
 
 
 
                 <button
-                  className="mt-9 tracking-wide font-bold bg-yellow-500 text-gray-800 w-full py-4 rounded-lg hover:bg-gray-800  hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                  className="mt-11 tracking-wide font-bold bg-yellow-500 text-gray-800 w-full py-4 rounded-lg hover:bg-gray-800  hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                   type="submit"
                 >
               
@@ -144,13 +159,13 @@ const Register = () => {
                       />
                     </svg>
                   </div>
-                  <span class="ml-4">Sign in with Google</span>
+                  <span class="ml-4">Sign up with Google</span>
                 </button>
 
-                <p className="text-center mt-7 text-gray-500">
+                <p className="text-center mt-7 mb-5 text-gray-500">
                   Already have an account ?{" "}
                   <Link
-                    className="ml-1 text-slate-800 font-medium"
+                    className="ml-1 text-yellow-500 font-medium"
                     href="/auth/Login"
                   >
                   Login{" "}

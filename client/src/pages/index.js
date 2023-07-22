@@ -8,6 +8,7 @@ import * as Yup from "yup";
 import Link from "next/link";
 import Navbar from '@/components/Header/Navbar';
 import Login from './auth/Login';
+import banner from '@/components/Header/banner';
 
 
 
@@ -27,6 +28,9 @@ export default function Home() {
 
       <Header />
       <Navbar />
+      <banner />
+
+  
 
 
 
