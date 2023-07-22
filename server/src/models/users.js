@@ -6,8 +6,9 @@ const { Schema } = mongoose;
 
 
 const userSchema = new mongoose.Schema({
+    // fullName: {type:String, required: true}, // String is shorthand for {type: String}
+    // phoneNumber: Number,
     fullName: {type:String, required: true}, // String is shorthand for {type: String}
-    phoneNumber: Number,
     email: String,
     password: String,
     mode: {type: String, default: 'User'},

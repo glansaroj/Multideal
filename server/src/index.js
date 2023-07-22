@@ -9,7 +9,7 @@ const Users = require('./models/users')
 connection()
 const app = express()
 
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 app.use(express.json())
 
 // converting body to json format
@@ -40,6 +40,8 @@ app.post('/register', async (req, res) => {
     console.log(`Your app is listening on port ${port}`)
   })
  
+
+  0
 
 
    

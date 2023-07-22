@@ -5,8 +5,9 @@ import Link from "next/link";
 // import Wishlist from "./Wishlist";
 //
 import { AiOutlineUser } from "react-icons/ai";
-import { HeartOutlined } from "react-icons/ai";
-import { ShoppingCartOutlined } from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+
 
 import Register from "@/pages/auth/Register";
 import Login from "@/pages/auth/Login";
@@ -32,17 +33,40 @@ function Header() {
         </a>
       </div>
 
-      <div className="search mr-80">
+      <div className="search mr-76">
         <Search />
       </div>
 
 
       {/* WISH LIST & CART */}
+      <div className="wishlist&cart flex gap-6 -mr-20 w-44 ">
 
-      <div className="text-white">
-        Wish List
-      
+      <div className="wishlist">
+
+
+      <div className="text-white text-4xl">
+        <AiOutlineHeart />
       </div>
+
+      </div>
+
+
+    <div className="cart">
+
+      <div className="text-white text-4xl relative">
+      <div className="z-10">
+      < AiOutlineShoppingCart />
+      </div>
+    </div>
+
+        <div className="bg-yellow-500  -mt-4 h-6  z-40 w-6 rounded-full flex items-center text-center justify-center">
+        <span className="text-black text-xs font-semibold">1</span>
+        </div>
+      </div>
+
+      </div>
+
+
 
 
     

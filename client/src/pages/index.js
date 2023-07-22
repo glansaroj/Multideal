@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Router from 'next/router';
 import Header from '@/components/Header/Header';
+import Image from 'next/image';
 
 
 import { Formik, Form, Field } from "formik";
@@ -8,7 +9,7 @@ import * as Yup from "yup";
 import Link from "next/link";
 import Navbar from '@/components/Header/Navbar';
 import Login from './auth/Login';
-import banner from '@/components/Header/banner';
+import Banner from '@/components/Header/banner';
 
 
 
@@ -28,7 +29,13 @@ export default function Home() {
 
       <Header />
       <Navbar />
-      <banner />
+
+      <div className='banner mt-7 w-full'>
+      < Image  src='/Banner2.jpg' width={1500}  height={500} />
+
+      </div>
+
+      
 
   
 

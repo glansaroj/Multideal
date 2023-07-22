@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 
-function banner() {
+function Banner() {
   return (
     <div className="mt-3">
-      <Image src="/banner1.jpg" width={700} height={200} alt="banner" />
+      <Image src="/Banner2.jpg" width={900} height={200} alt="banner" />
     </div>
   );
 }
 
-export default banner;
+export default Banner;

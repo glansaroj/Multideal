@@ -3,9 +3,17 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // import Register from "./auth/Login/register";
 
 const Login = () => {
+
+  // Toastify popup
+  const notify = () => toast.success("Successfully Login !");
+  
+
   // Login Schema
   const LoginSchema = Yup.object().shape({
     email: Yup.string()
@@ -43,6 +51,7 @@ const Login = () => {
               // same shape as initial values
               console.log(values);
               alert("Form is validated! Submitting the form...");
+              
             }}
           >
             {({ errors, touched }) => (
@@ -85,9 +94,22 @@ const Login = () => {
                 <button
                   className="mt-9 tracking-wide font-bold bg-yellow-500 text-gray-800 w-full py-4 rounded-lg hover:bg-slate-800  hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                   type="submit"
+                  onClick={notify}
                 >
                   <span class="text-md">Login</span>
                 </button>
+                <ToastContainer
+                  position="top-center"
+                  autoClose={4000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                  theme="light"
+                />
 
                 <div class="my-8 border-b text-center">
                   <div class="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-gray-100 transform translate-y-1/2">

@@ -3,6 +3,8 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 // Components importing
@@ -10,8 +12,15 @@ import Header from "@/components/Header/Header";
 import Navbar from "@/components/Header/Navbar";
 
 const Register = () => {
+
+  // Toastify popup
+  const notify = () => toast.success("Congrats!, Your're Successfully register.");
+
+
   const RegisterSchema = Yup.object().shape({
     FullName: Yup.string()
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
     .required("Full Name is a required field"),
 
     email: Yup.string()
@@ -19,7 +28,6 @@ const Register = () => {
     .email("Invalid email address")
     // Required Field Validation
     .required("Email is a required field")
-
     .min(5, "Must be more than 8 characters"),
 
   // Error messages
@@ -31,7 +39,32 @@ const Register = () => {
     .min(8, "Password must have at least 8 characters")
     // Error messages for requirements
     .matches(/[0-9]/, "Must include a digit!"),
+
+  confirmPassword: Yup.string()
+        .min(5, 'Must be more than 8 characters!')
+        .required('Confirm Password is a required field')
+        .oneOf([Yup.ref('password'), null], 'Passwords must match'),
   });
+
+
+  // Register Handling:
+  const handleRegister = async(values) => {
+    const {confirmPassword, ...formFields }= values
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formFields)
+  };
+  const res = await fetch('http://localhost:4000/auth/register',requestOptions)
+  const data = await res.json()
+  if(data) {
+    alert(data.msg)
+  }
+  }
+
+
+
+
   return (
     <>
      <Header />
@@ -44,13 +77,16 @@ const Register = () => {
           </h1>
           <Formik
             initialValues={{
-              phoneNumber: "",
+              fullName:"",
+              email: "",
               password: "",
+              confirmPassword : "",
             }}
             validationSchema={RegisterSchema}
             onSubmit={(values) => {
               // same shape as initial values
               console.log(values);
+              handleRegister(values)
             }}
           >
             {({ errors, touched }) => (
@@ -94,13 +130,13 @@ const Register = () => {
 
                 <Field
                   className="w-full px-8 py-4 focus:border-yellow-500 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:bg-white mt-8"
-                  name="password"
+                  name="confirmPassword"
                   type="password"
                   placeholder="Confirm Password"
                 />
-                {errors.password && touched.password ? (
+                {errors.confirmPassword && touched.confirmPassword ? (
                   <div className="mt-1 text-xs text-red-400">
-                    {errors.password}
+                    {errors.confirmPassword}
                   </div>
                 ) : null}
 
@@ -125,10 +161,23 @@ const Register = () => {
                 <button
                   className="mt-11 tracking-wide font-bold bg-yellow-500 text-gray-800 w-full py-4 rounded-lg hover:bg-gray-800  hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                   type="submit"
+                  onClick={notify}
                 >
               
                   <span class="ml-3">Sign Up</span>
                 </button>
+                <ToastContainer 
+                   position="top-center"
+                  autoClose={4000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                  theme="light"
+                />
 
 
                 <div class="my-8 border-b text-center">
