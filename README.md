@@ -112,7 +112,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
     - [X] Header
     - [X] Navigation bar
     - [ ] Hero section 
-    - [ ]  Main content area
+    - [ ] Main content area
     - [ ] Sidebar
     - [ ] Footer
 
@@ -125,7 +125,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
 - [ ] I. Structure, Pages & navigation 
     - [X] Home page
     - [X] Login/signup pages
-    - [ ] vendor/ shop listing form
+    - [X] vendor/ shop listing form
     - [ ] Product listing pages
     - [ ] Product detail pages
     - [ ] product categories 
