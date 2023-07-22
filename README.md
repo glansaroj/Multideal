@@ -59,15 +59,16 @@ While crafting this project, I'll be using a wide range of awesome & cool modern
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
-* Next JS
-* React JS
+* ![Node](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+* ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+* ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+* Mongoose
 * Redux
 * Tailwind CSS
-* Material UI
-* Material Design
+* Ant Design
+* Chakra UI
 * Formik & Yup for Form Validation
-* MongoDB/Mongoose
-* Node JS/Express
+* React Toastify
 * & Many more ...
 
 
@@ -93,7 +94,8 @@ While crafting this project, I'll be using a wide range of awesome & cool modern
 ## Roadmap & Features checklist
 Here is my ideal roadmap & features checklist for completing this project in a more organized and efficient way.
 
-### (1) Design
+<details>
+<summary> (1) Design </summary>
 
 - [X] I. Brand identity/color scheme & typography 
     - [X] project name
@@ -117,8 +119,15 @@ Here is my ideal roadmap & features checklist for completing this project in a m
     - [ ] Footer
 
 
+</details>
 
-### (2) Development
+
+<details>
+<summary> 
+ (2) Development
+  
+</summary>
+
 
  #### (Front-End Development)
 
@@ -148,11 +157,30 @@ Here is my ideal roadmap & features checklist for completing this project in a m
  #### (Back-End Development:
 
 
+  
+</details>
 
 
-### (3) Testing 
 
-### (4) Deployment
+
+
+<details>
+  <summary>
+ (3) Demonstration (Testing)
+  
+    
+  </summary>
+</details>
+
+
+<details>
+  <summary>
+    (4) Deployment
+  </summary>
+</details>
+
+
+
 
 
 
