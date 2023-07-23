@@ -129,7 +129,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
 </summary>
 
 
- #### (Front-End Development)
+ #### Front-End Development:
 
 - [ ] I. Structure, Pages & navigation 
     - [X] Home page
@@ -152,9 +152,33 @@ Here is my ideal roadmap & features checklist for completing this project in a m
      - [ ] user rating & feedback
      - [ ] Filtering & sorting by price, brand etc.
      - [ ] basic stock mgt
-     - [ ] proceed to checkout 
+     - [ ] proceed to checkout
+     - [ ] Order tracking
+     - [ ] Product comparison
+     - [ ] Admin panel & Dashboard with Data visualization 
 
- #### (Back-End Development:
+ #### Back-End Development:
+
+ - [X] Basic server setup & connect DB
+ - [ ] set users types & roles [Customers, vendor, admin]
+ - [ ] Define entities [vendors, products, orders, customers, admin]
+ - [ ] MongoDB collections for diff. entities  
+ - [ ] Use Express.js for routing and middleware
+ - [ ] Develop RESTful API endpoints
+ - [ ] User authentication with MongoDB
+ - [ ] Implement endpoints for auth, vendor/order management
+ - [ ] Implement JWT-based authentication
+ - [ ] Validate user credentials using MongoDB queries
+ - [ ] Vendor management with MongoDB
+ - [ ] Endpoints and queries for vendor, products, inventory, & orders
+ - [ ] Backend Error handling
+ - [ ] Endpoints and queries for browsing, cart management
+ - [ ] Search, Filter & pagination on backend
+ - [ ] Order API for placement, tracking & fulfilment
+ - [ ] Third-party integrations with MongoDB
+ - [ ] Integrate Payment gateways (Optional)
+ - [ ] Implement access control, user authentication, and encryption 
+ - [ ] Test API endpoints and MongoDB interactions
 
 
   
