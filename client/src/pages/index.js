@@ -9,7 +9,9 @@ import * as Yup from "yup";
 import Link from "next/link";
 import Navbar from '@/components/Header/Navbar';
 import Login from './auth/Login';
-import Banner from '@/components/Header/banner';
+import Hero from '@/components/Header/hero';
+import Footer from '@/components/Footer/Footer';
+
 
 
 
@@ -29,11 +31,13 @@ export default function Home() {
 
       <Header />
       <Navbar />
+      <Hero />
 
-      <div className='banner mt-7 w-full'>
+      {/* <div className='banner mt-7 w-full'>
       < Image  src='/Banner2.jpg' width={1500}  height={500} />
 
-      </div>
+      </div> */}
+      <Footer />
 
       
 
@@ -41,7 +45,7 @@ export default function Home() {
 
 
 
-      <Login />
+      {/* <Login /> */}
 
 
       
