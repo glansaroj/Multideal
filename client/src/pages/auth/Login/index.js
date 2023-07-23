@@ -5,6 +5,9 @@ import * as Yup from "yup";
 import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Header from "@/components/Header/Header";
+import Navbar from "@/components/Header/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 // import Register from "./auth/Login/register";
 
@@ -38,6 +41,9 @@ const Login = () => {
 
   return (
     <>
+
+    <Header />
+    <Navbar />
       <div className="container  bg-gray-100 text-gray-900 flex flex-row min-h-screen  w-full justify-center items-center">
         <div className="app--login mt-12 flex flex-col text-gray-800 text-left items-center">
           <h1 class="text-2xl xl:text-3xl font-bold mb-4">Customer Login</h1>
@@ -155,7 +161,10 @@ const Login = () => {
             )}
           </Formik>
         </div>
+
       </div>
+      <Footer />
+
     </>
   );
 };

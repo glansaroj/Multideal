@@ -5,6 +5,8 @@ import * as Yup from "yup";
 import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "@/components/Footer/Footer";
+
 
 
 // Components importing
@@ -55,7 +57,7 @@ const Register = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formFields)
   };
-  const res = await fetch('http://localhost:4000/auth/register',requestOptions)
+  const res = await fetch('http://localhost:4000/register',requestOptions)
   const data = await res.json()
   if(data) {
     alert(data.msg)
@@ -234,6 +236,8 @@ const Register = () => {
           </p> */}
         </div>
       </div>
+
+      <Footer />
     </>
   );
 };

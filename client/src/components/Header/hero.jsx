@@ -19,7 +19,7 @@ function Hero() {
     {/* Features */}
     <div className='feature my-8  mt-20 flex justify-center'>
 
-    <div className='w-11/12  flex justify-between border bg-white shadow-md px-6 items-center  h-32'>
+    <div className='w-11/12  flex justify-between border bg-white shadow-md px-7 items-center  h-32'>
 
     {/* 1 */}
     <div className='free flex items-center gap-2.5'>

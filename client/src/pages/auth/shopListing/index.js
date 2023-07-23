@@ -4,6 +4,8 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Header from "@/components/Header/Header";
 import Navbar from "@/components/Header/Navbar";
+import Footer from "@/components/Footer/Footer";
+
 import Link from "next/link";
 
 function shopListing() {
@@ -205,6 +207,8 @@ function shopListing() {
           )}
         </Formik>
       </div>
+
+      <Footer />
     </>
   );
 }
