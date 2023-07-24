@@ -113,10 +113,10 @@ Here is my ideal roadmap & features checklist for completing this project in a m
 - [ ] III. UI & Layout
     - [X] Header
     - [X] Navigation bar
-    - [ ] Hero section 
-    - [ ] Main content area
+    - [X] Hero section 
+    - [X] Main content area
     - [ ] Sidebar
-    - [ ] Footer
+    - [X] Footer
 
 
 </details>
