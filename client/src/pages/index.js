@@ -11,6 +11,7 @@ import Navbar from '@/components/Header/Navbar';
 import Login from './auth/Login';
 import Hero from '@/components/Header/hero';
 import Footer from '@/components/Footer/Footer';
+import FlashDeal from '@/components/Main/Flash Deal';
 
 
 
@@ -32,6 +33,8 @@ export default function Home() {
       <Header />
       <Navbar />
       <Hero />
+
+      <FlashDeal />
 
       {/* <div className='banner mt-7 w-full'>
       < Image  src='/Banner2.jpg' width={1500}  height={500} />

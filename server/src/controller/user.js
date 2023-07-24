@@ -6,11 +6,11 @@ const checkIfUserExists=async(req,res)=>{
     if(data){
         res.json({
             msg:"This Email address already exists",
-            validEmail:false
+            validemail:false
         })
     }else{
         res.json({
-            validEmail:true
+            validemail:true
         })
     }
 }
@@ -23,3 +23,6 @@ const registerUser=async(req, res) => {
   }
 
 module.exports={checkIfUserExists,registerUser}
+
+
+

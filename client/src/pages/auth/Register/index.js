@@ -20,7 +20,7 @@ const Register = () => {
 
 
   const RegisterSchema = Yup.object().shape({
-    FullName: Yup.string()
+    fullName: Yup.string()
     .min(2, 'Too Short!')
     .max(50, 'Too Long!')
     .required("Full Name is a required field"),
@@ -65,6 +65,10 @@ const Register = () => {
   }
 
 
+//  Handling Email Exist or not
+
+
+
 
 
   return (
@@ -96,11 +100,11 @@ const Register = () => {
                 {/* <label for="firstName">First Name*</label> */}
                 <Field
                   className="w-full px-8 py-4 mt-3 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
-                  name="FullName"
+                  name="fullName"
                   placeholder="Full Name"
                 />
-                {errors.FullName && touched.FullName ? (
-                  <div className="mt-1 text-xs text-red-400">{errors.FullName}</div>
+                {errors.fullName && touched.fullName ? (
+                  <div className="mt-1 text-xs text-red-400">{errors.fullName}</div>
                 ) : null}
 
               

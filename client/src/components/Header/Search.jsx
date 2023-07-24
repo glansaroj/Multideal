@@ -8,7 +8,7 @@ function Search() {
           placeholder="I'm Shopping for "
           title='Search bar'
         />
-        <button className="bg-yellow-500 py-3 px-4 font-semibold focus:ring-none ">Search</button>
+        <button className="bg-yellow-500 py-3 px-4 font-semibold focus:ring-none  ">Search</button>
       
       {/* <input type="search"> </input> */}
     </div>

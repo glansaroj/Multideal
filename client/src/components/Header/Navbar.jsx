@@ -64,7 +64,7 @@ const items = [
   {
     key: '6',
     label: (
-      <a className='bg-yellow-500' target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+      <a c target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
         Books & Stationery
       </a>
     ),
@@ -82,7 +82,7 @@ const items = [
   },
 
   {
-    key: '7',
+    key: '8',
     label: (
       <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
         Phone & Accessories
@@ -90,11 +90,19 @@ const items = [
     ),
     
   },
+
   {
-    key: '4',
-    danger: true,
-    label: 'a danger item',
+    key: '9',
+    label: (
+      <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+      Sport & Outdoor
+      </a>
+    ),
+    
   },
+
+  
+ 
 ];
 
 
