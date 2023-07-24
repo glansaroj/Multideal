@@ -102,12 +102,12 @@ Here is my ideal roadmap & features checklist for completing this project in a m
     - [X] Primary & accent colors
     - [X] Fonts and typo
 
-- [ ] II. Design key elements 
+- [X] II. Design key elements 
     - [X] Logo
     - [X] Buttons
     - [X] Forms
     - [X] wireframes and mockups
-    - [ ] Flowchart / Diagram
+    - [X] Flowchart / Diagram
 
 
 - [ ] III. UI & Layout
