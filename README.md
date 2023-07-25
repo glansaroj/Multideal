@@ -155,6 +155,8 @@ Here is my ideal roadmap & features checklist for completing this project in a m
      - [ ] proceed to checkout
      - [ ] Order tracking
      - [ ] Product comparison
+     - [ ] Implemented multilingual features
+     - [ ] Integrate Messenger chat Plugin
      - [ ] Admin panel & Dashboard with Data visualization 
 
  #### Back-End Development:
@@ -201,6 +203,14 @@ Here is my ideal roadmap & features checklist for completing this project in a m
   <summary>
     (4) Deployment
   </summary>
+</details>
+
+<details>
+  <summary>
+  Workflow Diagram 
+  </summary>
+     <img src="https://github.com/trulysaroj/Multideal/blob/master/Workflow%20Diagram.png" alt="Workflow Diagram">
+  
 </details>
 
 
