@@ -19,7 +19,7 @@ import Image from "next/image";
 
 function Header() {
   return (
-    <div className="bg-slate-900 h-36 py-4  shadow-sm flex flex-row justify-between items-center">
+    <div className="bg-slate-900 h-32 py-0  shadow-sm flex flex-row justify-between items-center">
       {/* <h1 className='text-4xl font-semibold px-12 text-white'> MultiDeal</h1> */}
 
       <div className="logo">
@@ -39,29 +39,37 @@ function Header() {
 
 
       {/* WISH LIST & CART */}
-      <div className="wishlist&cart flex gap-6 -mr-20 w-44 ">
+      <div className="wishlist&cart flex gap-7 -mr-20 w-44 ">
 
-      <div className="wishlist">
+      <div className="wishlist flex items-center justify-center rounded-full bg-white w-[40px] h-[40px] ">
 
-
-      <div className="text-white text-4xl">
+      <div className="text-slate-800 text-2xl">
         <AiOutlineHeart />
       </div>
 
+      <div className="counter bg-yellow-500 w-5 h-5 rounded-full ml-9 mb-8 absolute flex items-center justify-center">
+      <p className="font-semibold text-slate-800"> 4</p>
+
+      </div>
+
       </div>
 
 
-    <div className="cart">
+    <div className="cart flex items-center justify-center rounded-full bg-white w-[40px] h-[40px] ">
 
-      <div className="text-white text-4xl relative">
-      <div className="z-10">
+
+      <div className="text-slate-800 text-2xl">
+      
       < AiOutlineShoppingCart />
       </div>
+
+      <div className="counter bg-yellow-500 w-5 h-5 rounded-full ml-9 mb-8 absolute flex items-center justify-center">
+      <p className="font-semibold text-slate-800"> 1</p>
+
+      
     </div>
 
-        <div className="bg-yellow-500  -mt-4 h-6  z-40 w-6 rounded-full flex items-center text-center justify-center">
-        <span className="text-black text-xs font-semibold">1</span>
-        </div>
+      
       </div>
 
       </div>

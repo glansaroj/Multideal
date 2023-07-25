@@ -18,24 +18,22 @@ app.use(cors());
 
 
 
+
+
 // GET method ---> For checking Email exist
-app.get('/checkEmailExists/:email', async(req, res) => {
-  const data= await Users.findOne({email:req.params.email })
-  if(data) {
-    res.json({
-      msg: "Email address already exists",
-      validEmail: false
-    })
-  }else{
-    res.json({
-      validEmail: true
-    })
-  }
-  })
-
-
-
-
+// app.get('/checkEmailExists/:email', async(req, res) => {
+//   const data= await Users.findOne({email:req.params.email })
+//   if(data) {
+//     res.json({
+//       msg: "Email address already exists",
+//       validEmail: false
+//     })
+//   }else{
+//     res.json({
+//       validEmail: true
+//     })
+//   }
+//   })
 
 
 

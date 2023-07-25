@@ -3,6 +3,7 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "@/components/Footer/Footer";
@@ -14,7 +15,7 @@ import Header from "@/components/Header/Header";
 import Navbar from "@/components/Header/Navbar";
 
 const Register = () => {
-
+  
   // Toastify popup
   const notify = () => toast.success("Congrats!, Your're Successfully register.");
 
@@ -57,16 +58,16 @@ const Register = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formFields)
   };
+
+
+
+
   const res = await fetch('http://localhost:4000/register',requestOptions)
   const data = await res.json()
   if(data) {
     alert(data.msg)
   }
   }
-
-
-//  Handling Email Exist or not
-
 
 
 
