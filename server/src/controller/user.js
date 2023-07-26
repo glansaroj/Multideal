@@ -1,6 +1,5 @@
 
-const Users=require('../models/user')
-
+const Users= require('../models/users')
 // Importing bcrypt (pass hasing liabraries)
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
@@ -10,7 +9,7 @@ const saltRounds = 10;
 const registerUser=  async(req, res) => {
     try{
         // Checking Email addesss exist or not
-        const data= await Users.findOne({email:req.body.email })
+        const data= await Users.findOne({email: req.body.email })
         if(data){
             res.status(409).json({
                 msg: "Email address already exists",
@@ -36,9 +35,11 @@ const registerUser=  async(req, res) => {
 }
 
 
+module.exports= {registerUser};
 
-module.exports={registerUser}
 
+
+///////////////////////////////////////////////////
 
 
 

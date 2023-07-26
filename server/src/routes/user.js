@@ -1,11 +1,16 @@
 
-const express = require('express')  // Importing espress
+const express = require('express')  
 const UsersController=require('../controller/user')
-const app = express.Router();
+const router = express.Router();
+
+
+// router.get('/email-availabe/:email',UsersController.checkIfUserExists)
+router.post('/register',UsersController.registerUser ) 
+
+module.exports=router;
+
+
+////////////////////////////////////////
 
 
 
-// app.get('/checkUserExists/:email',UsersController.checkIfUserExists)
-app.post('/register',UsersController.registerUser ) 
-
-module.exports=app;
