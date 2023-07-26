@@ -53,7 +53,7 @@ MultiDeal, a multivendor E-commerce platform (project) powered with MERN stack, 
 
 
 
-## Tech-stack 
+## 💻 Tech-stack 
 
 While crafting this project, I'll be using a wide range of awesome & cool modern tech-stacks which really excite me the most. Tech-stacks & libraries that will be used in this project are as follows:
 
@@ -92,7 +92,7 @@ While crafting this project, I'll be using a wide range of awesome & cool modern
 
 
 <!-- ROADMAP -->
-## Roadmap & Features checklist
+## 🗺  Roadmap & Features checklist
 Here is my ideal roadmap & features checklist for completing this project in a more organized and efficient way.
 
 <details>
@@ -223,7 +223,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## 📃 Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
@@ -268,7 +268,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact
+## ☎ Contact
 Have any doubts/queries & feedback regarding this project? <br>
   Leave your message here 👇
 
