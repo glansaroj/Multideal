@@ -55,7 +55,7 @@ MultiDeal, a multivendor E-commerce platform (project) powered with MERN stack, 
 
 ## Tech-stack 
 
-While crafting this project, I'll be using a wide range of awesome & cool modern tech-stacks which really excite me the most. Tech-stacks that will be used in this project are as follows:
+While crafting this project, I'll be using a wide range of awesome & cool modern tech-stacks which really excite me the most. Tech-stacks & libraries that will be used in this project are as follows:
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
@@ -69,6 +69,7 @@ While crafting this project, I'll be using a wide range of awesome & cool modern
 * Chakra UI
 * Formik & Yup for Form Validation
 * React Toastify
+* bcrypt
 * & Many more ...
 
 
@@ -162,7 +163,8 @@ Here is my ideal roadmap & features checklist for completing this project in a m
  #### Back-End Development:
 
  - [X] Basic server setup & connect DB
- - [ ] set users types & roles [Customers, vendor, admin]
+ - [X] set users types & roles [Customers, vendor, admin]
+ - [X] User password hashing
  - [ ] Define entities [vendors, products, orders, customers, admin]
  - [ ] MongoDB collections for diff. entities  
  - [ ] Use Express.js for routing and middleware
