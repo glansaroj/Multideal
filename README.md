@@ -67,9 +67,9 @@ While crafting this project, I'll be using a wide range of awesome & cool modern
 * Tailwind CSS
 * Ant Design
 * Chakra UI
-* Formik & Yup for Form Validation
+* Formik & Yup 
 * React Toastify
-* bcrypt
+* bcrypt & JWT
 * & Many more ...
 
 
@@ -165,13 +165,13 @@ Here is my ideal roadmap & features checklist for completing this project in a m
  - [X] Basic server setup & connect DB
  - [X] set users types & roles [Customers, vendor, admin]
  - [X] User password hashing
+ - [X] Implement JWT-based authentication
  - [ ] Define entities [vendors, products, orders, customers, admin]
  - [ ] MongoDB collections for diff. entities  
  - [ ] Use Express.js for routing and middleware
  - [ ] Develop RESTful API endpoints
  - [ ] User authentication with MongoDB
  - [ ] Implement endpoints for auth, vendor/order management
- - [ ] Implement JWT-based authentication
  - [ ] Validate user credentials using MongoDB queries
  - [ ] Vendor management with MongoDB
  - [ ] Endpoints and queries for vendor, products, inventory, & orders
@@ -253,6 +253,18 @@ _Below is an example of how you can instruct your audience on installing and set
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
+
+### Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+
+
+```
+PORT= XXXX   (Your port)
+
+SECRET_KEY= XXXXXXXXX   (Your secret JWT custom key)
+```
 
 
 
