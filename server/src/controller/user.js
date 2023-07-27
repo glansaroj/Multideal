@@ -4,11 +4,15 @@ const Users= require('../models/users')
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
+const jwt = require('jsonwebtoken');
+
+
 
 //  User Register with password hashing
 const registerUser=  async(req, res) => {
     try{
-        // Checking Email addesss exist or not
+
+        // Setp-1 --> Checking Email addesss exist or not
         const data= await Users.findOne({email: req.body.email })
         if(data){
             res.status(409).json({
@@ -17,13 +21,18 @@ const registerUser=  async(req, res) => {
             })
             
         }else{
-                // Genreating hash password from user password 
-                req.body.password = await bcrypt.hash(req.body.password, saltRounds);
-                await Users.create(req.body);
-                res.json({
-                    msg: "you are successfully registered",
-                    success: true
-                })
+
+            // Step-2 --> Genreating hash password from user password 
+            req.body.password = await bcrypt.hash(req.body.password, saltRounds);
+
+            // Step-3 --> Creating JWT (Token) for user
+            const token = jwt.sign({email: req.body.email}, 'process.env.SECRET_KEY');
+            await Users.create(req.body);
+            res.json({
+                msg: "you are successfully registered",
+                success: true,
+                token
+            })
         
         }
       
@@ -39,7 +48,7 @@ module.exports= {registerUser};
 
 
 
-///////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 
 
 
