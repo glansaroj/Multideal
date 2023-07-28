@@ -63,7 +63,7 @@ While crafting this project, I'll be using a wide range of awesome & cool modern
 * ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 * ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 * Mongoose
-* Redux
+* Zustand 
 * Tailwind CSS
 * Ant Design
 * Chakra UI
