@@ -13,11 +13,21 @@ import Footer from "@/components/Footer/Footer";
 // Components importing
 import Header from "@/components/Header/Header";
 import Navbar from "@/components/Header/Navbar";
+import { data } from "autoprefixer";
 
 const Register = () => {
-  
-  // Toastify popup
-  const notify = () => toast.success("Congrats!, Your're Successfully register.");
+
+    // Toastify popup
+    const notify = () => {
+      data ?
+        toast.success("Congrats!, Your're Successfully register."):
+        toast.error("Oops!, This User already exist.");
+    }
+
+
+  // const Error = () => toast.error("Oops!, This user already exist.");
+
+
 
 
   const RegisterSchema = Yup.object().shape({
@@ -64,8 +74,12 @@ const Register = () => {
 
   const res = await fetch('http://localhost:4000/register',requestOptions)
   const data = await res.json()
+  
+  
   if(data) {
     alert(data.msg)
+
+   
   }
   }
 
@@ -166,15 +180,16 @@ const Register = () => {
 
 
                 <button
-                  className="mt-11 tracking-wide font-bold bg-yellow-500 text-gray-800 w-full py-4 rounded-lg hover:bg-gray-800  hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                  className="signup mt-11 tracking-wide font-bold bg-yellow-500 text-gray-800 w-full py-4 rounded-lg hover:bg-gray-800  hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                   type="submit"
-                  onClick={notify}
+                  onClick={notify }
                 >
               
                   <span class="ml-3">Sign Up</span>
                 </button>
                 <ToastContainer 
                    position="top-center"
+
                   autoClose={4000}
                   hideProgressBar={false}
                   newestOnTop={false}
@@ -185,6 +200,8 @@ const Register = () => {
                   pauseOnHover
                   theme="light"
                 />
+
+                
 
 
                 <div class="my-8 border-b text-center">
