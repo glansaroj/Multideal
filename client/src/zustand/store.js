@@ -14,5 +14,7 @@ const useStore = create((set) => ({
 
 
 
-// TODO:- Split the store into separate slices 
+
+
+// TODO:- Combine multiple stores into one bounded store:
 
