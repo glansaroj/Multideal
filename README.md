@@ -211,7 +211,28 @@ Here is my ideal roadmap & features checklist for completing this project in a m
   <summary>
   Workflow Diagram 
   </summary>
-     <img src="https://github.com/trulysaroj/Multideal/blob/master/Workflow%20Diagram.png" alt="Workflow Diagram">
+  
+ 
+  <img src="https://github.com/trulysaroj/Multideal/blob/master/Workflow%20Diagram.png" alt="Workflow Diagram">
+
+
+    
+  ***<h3 align='center'> Fig-I: Multivendor E-commerce Workflow Diagram</h3>***  
+  
+
+
+____   
+
+
+![image](https://github.com/trulysaroj/Multideal/blob/master/Login%20auth%20Diagram.png)
+
+  ***<h3 align='center'> Fig-II: Login Authorization</h3>***  
+
+   
+     
+    
+
+     
   
 </details>
 
