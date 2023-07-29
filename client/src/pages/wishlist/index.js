@@ -18,11 +18,11 @@ const Wishlist = () => {
 
 
     <div className='flex  flex-col items-center justify-center'>
-    <Image className='mt-4' src={'/empty.png'} width={'500'} height={'500'} />
+    <Image className='mt-4' src={'/empty.png'} width={'400'} height={'400'} />
 
     <h3 className='text-lg -mt-5 text-slate-800 font-bold '>Your Wish list is empty</h3>
 
-     <a className='bg-yellow-500 px-6 text-white font-semibold rounded-sm shadow-md mt-5 py-2.5' href="">Go to Shop </a>
+     <a className='bg-yellow-500 px-7 hover:bg-slate-800 text-white transition-3s font-semibold rounded-md shadow-md mt-5 py-3' href="">Go to Shop </a>
 
 
 
