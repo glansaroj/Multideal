@@ -136,11 +136,11 @@ Here is my ideal roadmap & features checklist for completing this project in a m
     - [X] Home page
     - [X] Login/signup pages
     - [X] vendor/ shop listing form
+    - [X] Shopping cart
+    - [X] Wishlist
     - [ ] Product listing pages
     - [ ] Product detail pages
     - [ ] product categories 
-    - [ ] Shopping cart
-    - [ ] Wishlist 
     - [ ] Checkout process
     - [ ] User account pages
 
