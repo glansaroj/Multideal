@@ -3,7 +3,9 @@ import React from 'react'
 import Header from "@/components/Header/Header";
 import Navbar from "@/components/Header/Navbar";
 import Footer from "@/components/Footer/Footer";
+
 import Image from 'next/image';
+
 
 
 const Wishlist = () => {
@@ -13,6 +15,9 @@ const Wishlist = () => {
     <Navbar />
 
     <div className='w-full h-screen'>
+
+
+    <h1 className='text-5xl font-bold text-slate-800'>My wishList</h1>
 
     <h1 className='text-4xl font-bold text-slate-800 text-center mt-16'>My wishList</h1>
 
@@ -27,6 +32,7 @@ const Wishlist = () => {
 
 
     </div>
+
 
 
 
