@@ -43,9 +43,13 @@ function Header() {
 
       <div className="wishlist flex items-center justify-center rounded-full bg-white w-[40px] h-[40px] ">
 
+
+
+      <Link href='/wishlist'>
       <div className="text-slate-800 text-2xl">
         <AiOutlineHeart />
       </div>
+      </Link>
 
       <div className="counter bg-yellow-500 w-5 h-5 rounded-full ml-9 mb-8 absolute flex items-center justify-center">
       <p className="font-semibold text-slate-800"> 4</p>
