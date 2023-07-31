@@ -63,7 +63,7 @@ While crafting this project, I'll be using a wide range of awesome & cool modern
 * ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 * ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 * Mongoose
-* Redux
+* Zustand 
 * Tailwind CSS
 * Ant Design
 * Chakra UI
@@ -136,11 +136,11 @@ Here is my ideal roadmap & features checklist for completing this project in a m
     - [X] Home page
     - [X] Login/signup pages
     - [X] vendor/ shop listing form
+    - [X] Shopping cart
+    - [X] Wishlist
     - [ ] Product listing pages
     - [ ] Product detail pages
     - [ ] product categories 
-    - [ ] Shopping cart
-    - [ ] Wishlist 
     - [ ] Checkout process
     - [ ] User account pages
 
@@ -211,7 +211,28 @@ Here is my ideal roadmap & features checklist for completing this project in a m
   <summary>
   Workflow Diagram 
   </summary>
-     <img src="https://github.com/trulysaroj/Multideal/blob/master/Workflow%20Diagram.png" alt="Workflow Diagram">
+  
+ 
+  <img src="https://github.com/trulysaroj/Multideal/blob/master/Workflow%20Diagram.png" alt="Workflow Diagram">
+
+
+    
+  ***<h3 align='center'> Fig-I: Multivendor E-commerce Workflow Diagram</h3>***  
+  
+
+
+____   
+
+
+![image](https://github.com/trulysaroj/Multideal/blob/master/Login%20auth%20Diagram.png)
+
+  ***<h3 align='center'> Fig-II: Login Authorization</h3>***  
+
+   
+     
+    
+
+     
   
 </details>
 
