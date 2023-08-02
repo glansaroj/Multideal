@@ -4,7 +4,8 @@ import { createSlice } from "@reduxjs/toolkit";
 // Initail state
 export const initialState = {
   token:'',
-  userDetails: {}
+  userDetails: {},
+  isLoggedIn: false
 };
 
 
@@ -14,11 +15,13 @@ const usersSlice = createSlice({
     initialState,
     reducers: {
       setUserDetails(state, actions) {
+        debugger;
         const {token, userDetails} = actions.payload
             return{
                 ...state,
                 token,
-                userDetails
+                userDetails,
+                isLoggedIn: true
             }
       },
     },

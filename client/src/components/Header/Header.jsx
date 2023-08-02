@@ -63,7 +63,7 @@ function Header() {
       </div>
 
       <div className="userlogin text-white mr-12 text-sm  gap-2 flex items-center">
-        {/* <div className="text-4xl font-medium">
+        <div className="text-4xl font-medium">
           <AiOutlineUser />
         </div>
 
@@ -73,18 +73,18 @@ function Header() {
             Login
           </Link>
           <Link href="/auth/Register"> Register</Link>
-        </div> */}
+        </div>
 
     {/* AVATAR HERE */}
 
       
-      <Avatar className="blue-500 w-12 h-12 mr-2 rounded-xl font-semibold text-2xl border-2 border-bg-white"
+      {/* <Avatar className="blue-500 w-12 h-12 mr-2 rounded-xl font-semibold text-2xl border-2 border-bg-white"
       size='[30px]'
       name='S'
       
       bg= 'gray'
       
-    />{' '}
+    />{' '} */}
 
         
       </div>

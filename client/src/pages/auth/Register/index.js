@@ -7,6 +7,8 @@ import { useRouter } from 'next/navigation'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "@/components/Footer/Footer";
+import { Provider, useDispatch } from 'react-redux';
+
 
 
 
@@ -14,9 +16,22 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Navbar from "@/components/Header/Navbar";
 import { data } from "autoprefixer";
+import { setUserDetails } from "@/Redux/reducerSlice/users";
+import { MenuGroup } from "@chakra-ui/react";
 
 const Register = () => {
 
+  const router = useRouter()
+
+ 
+  // Calling useDispath Hook:
+  // const dispatch = useDispatch();
+
+   // Calling useDispath Hook:
+   const dispatch = useDispatch();
+  
+ 
+ 
     // Toastify popup
     const notify = () => {
       data ?
@@ -69,22 +84,31 @@ const Register = () => {
       body: JSON.stringify(formFields)
   };
 
+ 
 
 
+//* FIXING ON THIS PART -------->
 
   const res = await fetch('http://localhost:4000/register',requestOptions)
   const data = await res.json()
   
-  
-  if(data) {
+  if(data && res.status == 200) {
+    debugger;
+    alert(JSON.stringify(data));
+    dispatch(setUserDetails(data))
     alert(data.msg)
-
-   
+    router.push('/')
+    setTimeout(() => {
+          // msg.info(data.msg);
+    }, 2000);    
+  
+  } else {
+    msg.info(res.statusText);
   }
   }
 
 
-
+////////////////////////
 
   return (
     <>
