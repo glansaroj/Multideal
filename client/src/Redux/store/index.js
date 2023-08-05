@@ -3,8 +3,36 @@ import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import logger from "redux-logger";
 import users from "../reducerSlice/users";
-import storage from 'redux-persist/lib/storage';
+// import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
+
+
+
+// <------- TEST CODE HERE ------------->
+
+const createNoopStorage = () => {
+  return {
+    getItem(_key) {
+      return Promise.resolve(null);
+    },
+    setItem(_key, value) {
+      return Promise.resolve(value);
+    },
+    removeItem(_key) {
+      return Promise.resolve();
+    },
+  };
+};
+
+
+const storage =
+  typeof window === "undefined" ? createNoopStorage() : require("redux-persist/lib/storage").default;
+
+export default storage;
+
+
+// <--------- TEST CODE END HERE ------------->
+
 
 
 
@@ -24,18 +52,11 @@ const reducer = combineReducers({
 const persistedReducer = persistReducer(persistConfig, reducer)
 
 
-
-// const store = configureStore({
-//   reducer: persistedReducer,
-//   middleware: [logger],
-// });
-
-
 //* NEW CODE HERE
 export const store = configureStore({
   reducer: persistedReducer,
   devTools: true,
-  middleware:[logger]
+  middleware: [logger]
 })
 
 

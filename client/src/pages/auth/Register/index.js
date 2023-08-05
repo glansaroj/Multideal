@@ -23,9 +23,6 @@ const Register = () => {
 
   const router = useRouter()
 
- 
-  // Calling useDispath Hook:
-  // const dispatch = useDispatch();
 
    // Calling useDispath Hook:
    const dispatch = useDispatch();
