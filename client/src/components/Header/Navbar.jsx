@@ -156,7 +156,7 @@ function Navbar() {
     
 
     <div>
-     <Link className='ml-8 mr-5 text-lg text-white font-normal bg-yellow-500 py-1.5 px-4 rounded-sm' href='/auth/shopListing'>Become a Seller  </Link> 
+     <Link className='ml-8 mr-5 text-lg text-white font-normal bg-yellow-500 py-1.5 px-4 rounded-sm' href='/shopListing'>Become a Seller  </Link> 
 
     </div>
     </div>

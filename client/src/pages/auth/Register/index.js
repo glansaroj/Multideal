@@ -110,6 +110,16 @@ const Register = () => {
   }
 
 
+
+  const alertMessage = () => {
+    if (data && res.status == 200) {
+      toast.success("Congrats!, Your're Successfully register.")
+    } else {
+      toast.error("Oops!, This User already exist.");
+
+    }
+  }
+
 ////////////////////////
 
   return (
@@ -208,7 +218,7 @@ const Register = () => {
                 <button
                   className="signup mt-11 tracking-wide font-bold bg-yellow-500 text-gray-800 w-full py-4 rounded-lg hover:bg-gray-800  hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                   type="submit"
-                  onClick={notify }
+                  onClick={alertMessage }
                 >
               
                   <span class="ml-4">Sign Up</span>

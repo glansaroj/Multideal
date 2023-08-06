@@ -12,6 +12,7 @@ import Login from './auth/Login';
 import Hero from '@/components/Header/hero';
 import Footer from '@/components/Footer/Footer';
 import FlashDeal from '@/components/Main/Flash Deal';
+// import Register from './auth/Register';
 
 
 
@@ -20,7 +21,7 @@ import FlashDeal from '@/components/Main/Flash Deal';
 
 
 export default function Home() {
-    
+
   return (
     <>
       <Head>
@@ -34,6 +35,9 @@ export default function Home() {
       <Navbar />
       <Hero />
 
+
+
+
       <FlashDeal />
 
       {/* <div className='banner mt-7 w-full'>
@@ -42,21 +46,21 @@ export default function Home() {
       </div> */}
       <Footer />
 
-      
 
-  
+
+
 
 
 
       {/* <Login /> */}
 
 
-      
 
 
 
 
-      
+
+
     </>
   )
 }

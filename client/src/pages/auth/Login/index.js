@@ -8,14 +8,45 @@ import "react-toastify/dist/ReactToastify.css";
 import Header from "@/components/Header/Header";
 import Navbar from "@/components/Header/Navbar";
 import Footer from "@/components/Footer/Footer";
-
 // import Register from "./auth/Login/register";
 
+
 const Login = () => {
+  const router = useRouter()
+
+
+// Login Handler
+  const handleLogin = async (values) => {
+    try {
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values)
+      };
+      const res = await fetch('http://localhost:3000/login', requestOptions)
+      const data = await res.json()
+      if (data && data.success && res.status == 200) {
+        dispatch(setUserDetails(data))
+        router.push('/')
+        // msg.info(data.msg);
+        alert(data.msg)
+      } else {
+        // msg.info(data.msg);
+        alert(data.info)
+      }
+    } catch (err) {
+      // msg.info('Something went wrong!!');
+      alert('Something went wrong!!')
+    }
+
+  }
+
+
+
+
 
   // Toastify popup
   const notify = () => toast.success("Successfully Login !");
-  
 
   // Login Schema
   const LoginSchema = Yup.object().shape({
@@ -42,8 +73,8 @@ const Login = () => {
   return (
     <>
 
-    {/* <Header /> */}
-    {/* <Navbar /> */}
+      {/* <Header /> */}
+      {/* <Navbar /> */}
       <div className="container  bg-gray-100 text-gray-900 flex flex-row min-h-screen  w-full justify-center items-center">
         <div className="app--login mt-12 flex flex-col text-gray-800 text-left items-center">
           <h1 class="text-2xl xl:text-3xl font-bold mb-4">User Login</h1>
@@ -57,7 +88,7 @@ const Login = () => {
               // same shape as initial values
               console.log(values);
               alert("Form is validated! Submitting the form...");
-              
+
             }}
           >
             {({ errors, touched }) => (

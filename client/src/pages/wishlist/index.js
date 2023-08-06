@@ -16,9 +16,6 @@ const Wishlist = () => {
 
       <div className='w-full h-screen'>
 
-
-
-
         <h1 className='text-4xl font-bold text-slate-800 text-center mt-16'>My wishList</h1>
 
 
