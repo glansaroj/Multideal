@@ -20,14 +20,12 @@ import { setUserDetails } from "@/Redux/reducerSlice/users";
 import { MenuGroup } from "@chakra-ui/react";
 
 const Register = () => {
-
   const router = useRouter()
-
 
    // Calling useDispath Hook:
    const dispatch = useDispatch();
   
- 
+
  
     // Toastify popup
     const notify = () => {
@@ -94,13 +92,20 @@ const Register = () => {
     alert(JSON.stringify(data));
     dispatch(setUserDetails(data))
     alert(data.msg)
-    router.push('/')
+    // toast.success("Congrats!, Your're Successfully register.")
+
     setTimeout(() => {
-          // msg.info(data.msg);
+     // msg.info(data.msg)
+     router.push('/')
+
+
     }, 2000);    
   
   } else {
-    msg.info(res.statusText);
+    // msg.info(res.statusText);
+    toast.error("Oops!, This User already exist.");
+
+   
   }
   }
 
@@ -109,8 +114,8 @@ const Register = () => {
 
   return (
     <>
-     <Header />
-     <Navbar />
+     {/* <Header /> */}
+     {/* <Navbar /> */}
 
       <div className="container  bg-gray-100 text-gray-900 flex flex-row min-h-screen  w-full justify-center items-center">
         <div className="app--login mt-12 flex flex-col text-gray-800 text-left justify-center items-center">
@@ -132,7 +137,7 @@ const Register = () => {
             }}
           >
             {({ errors, touched }) => (
-              <Form className="h-5/6 w-[550px] bg-gray-200 bg-opacity-30 rounded-md shadow-md py-10 my-3 px-12 mb-20">
+              <Form className="h-5/6 w-[530px] bg-gray-200 bg-opacity-30 rounded-md shadow-md py-10 my-3 px-12 mb-20">
                 {/* <label for="firstName">First Name*</label> */}
                 <Field
                   className="w-full px-8 py-4 mt-3 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
@@ -146,7 +151,7 @@ const Register = () => {
               
 
                 <Field
-                  className="w-full px-8 py-4 mt-8 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
+                  className="w-full px-8 py-4 mt-7 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
                   name="email"
                   placeholder="Email"
                 />
@@ -158,7 +163,7 @@ const Register = () => {
 
 
                 <Field
-                  className="w-full px-8 py-4 focus:border-yellow-500 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:bg-white mt-8"
+                  className="w-full px-8 py-4 focus:border-yellow-500 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:bg-white mt-7"
                   name="password"
                   type="password"
                   placeholder="Password"
@@ -171,7 +176,7 @@ const Register = () => {
 
 
                 <Field
-                  className="w-full px-8 py-4 focus:border-yellow-500 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:bg-white mt-8"
+                  className="w-full px-8 py-4 focus:border-yellow-500 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:bg-white mt-7"
                   name="confirmPassword"
                   type="password"
                   placeholder="Confirm Password"
@@ -206,7 +211,7 @@ const Register = () => {
                   onClick={notify }
                 >
               
-                  <span class="ml-3">Sign Up</span>
+                  <span class="ml-4">Sign Up</span>
                 </button>
                 <ToastContainer 
                    position="top-center"

@@ -27,12 +27,17 @@ const registerUser=  async(req, res) => {
 
             // Step-3 --> Creating JWT (Token) for user
             const token = jwt.sign({email: req.body.email}, 'process.env.SECRET_KEY');
-            await Users.create(req.body);
+            // await Users.create(req.body);
+            const data = await Users.create(req.body)
+            if(data) {
+            const { password, ...otherFields } = data._doc    
             res.json({
                 msg: "you are successfully registered",
                 success: true,
-                token
+                token,               
+                userDetails: otherFields
             })
+        }
         
         }
       

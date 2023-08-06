@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
     email: String,
     password: String,
     mode: {type: String, default: 'User'},
-    vendorDetails: Object,
+    userDetails: Object,
   });
   
   const Users = mongoose.model('Users', userSchema);

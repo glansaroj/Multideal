@@ -42,11 +42,11 @@ const Login = () => {
   return (
     <>
 
-    <Header />
-    <Navbar />
+    {/* <Header /> */}
+    {/* <Navbar /> */}
       <div className="container  bg-gray-100 text-gray-900 flex flex-row min-h-screen  w-full justify-center items-center">
         <div className="app--login mt-12 flex flex-col text-gray-800 text-left items-center">
-          <h1 class="text-2xl xl:text-3xl font-bold mb-4">Customer Login</h1>
+          <h1 class="text-2xl xl:text-3xl font-bold mb-4">User Login</h1>
           <Formik
             initialValues={{
               email: "",
@@ -61,7 +61,7 @@ const Login = () => {
             }}
           >
             {({ errors, touched }) => (
-              <Form className="h-5/6 w-[550px]  bg-gray-200 bg-opacity-30 rounded-md border shadow-lg py-20 px-12 mb-20">
+              <Form className="h-5/6 w-[530px]  bg-gray-200 bg-opacity-30 rounded-md border shadow-lg py-12 px-12 mb-20">
                 <Field
                   className="w-full px-8 py-4 -mt-2 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
                   name="email"
@@ -74,7 +74,7 @@ const Login = () => {
                 ) : null}
 
                 <Field
-                  className="w-full px-8 py-4 focus:border-yellow-500 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:bg-white mt-8"
+                  className="w-full px-8 py-4 focus:border-yellow-500 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:bg-white mt-7"
                   name="password"
                   type="password"
                   placeholder="Password"
@@ -98,7 +98,7 @@ const Login = () => {
                   </label>
                 </div>
                 <button
-                  className="mt-9 tracking-wide font-bold bg-yellow-500 text-gray-800 w-full py-4 rounded-lg hover:bg-slate-800  hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                  className="mt-10 tracking-wide font-bold bg-yellow-500 text-gray-800 w-full py-4 rounded-lg hover:bg-slate-800  hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                   type="submit"
                   onClick={notify}
                 >
