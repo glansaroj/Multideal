@@ -17,9 +17,6 @@ import FlashDeal from '@/components/Main/Flash Deal';
 
 
 
-
-
-
 export default function Home() {
 
   return (

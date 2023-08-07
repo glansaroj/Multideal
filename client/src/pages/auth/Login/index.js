@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Header from "@/components/Header/Header";
 import Navbar from "@/components/Header/Navbar";
 import Footer from "@/components/Footer/Footer";
+import { useRouter } from "next/router";
 // import Register from "./auth/Login/register";
 
 

@@ -35,7 +35,7 @@ function shopListing() {
       <Header />
       <Navbar />
 
-      <h1 className="text-center mt-12 text-3xl text-gray-900 font-bold">
+      <h1 className="text-center mt-10 text-3xl text-gray-900 font-bold">
         {" "}
         Seller Application
       </h1>
@@ -56,8 +56,8 @@ function shopListing() {
             <Form className="h-5/6 w-[750px] bg-gray-200 bg-opacity-30 rounded-md shadow-md py-16 my-3 px-10 mb-20">
               {/* <label for="firstName">First Name*</label> */}
 
-             {/* SELLER INFO HERE */}
-              <h1 className="text-xl text-gray-900 mt-3 font-semibold">
+              {/* SELLER INFO HERE */}
+              <h1 className="text-xl text-gray-900 -mt-2 font-semibold">
                 Seller Information:
               </h1>
               <p className="mt-2 mb-4 text-sm text-gray-400">

@@ -7,28 +7,22 @@ const { Schema } = mongoose;
 
 const productSchema = new mongoose.Schema({
     name: {
-      type: String,
-      required: true,
+      type: String,required: true,
     },
     description: {
-      type: String,
-      required: true,
+      type: String,required: true,
     },
     price: {
-      type: Number,
-      required: true,
+      type: Number,required: true,
     },
     discount: {
-        type: Number,
-        required: false,
+        type: Number,required: true,
       },
     category: {
-      type: String,
-      required: true,
+      type: String,required: true,
     },
     imageUrl: {
-      type: String,
-      required: true,
+      type: String,required: true,
     },
     ratings: [{
       user: {
@@ -36,8 +30,7 @@ const productSchema = new mongoose.Schema({
         ref: 'User',
       },
       rating: {
-        type: Number,
-        required: true,
+        type: Number,required: true,
       },
     }],
     reviews: [{
