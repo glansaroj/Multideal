@@ -6,6 +6,11 @@ const connection = require('./dbConnect/connection')
 // const Users = require('./models/users')
 
 const userRoute=require('./routes/user')
+const productRoute = require('./routes/products')
+
+
+
+
 connection()
 const app = express()
 const port = process.env.PORT || 4000;

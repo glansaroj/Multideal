@@ -9,11 +9,19 @@ import {
 const Product = () => {
   return (
     <>
-      <div className="productbox flex-col">
+      <div className="productbox flex-col ">
         <div className="h-[400px] w-[280px] bg-white  ">
-          <div className="pt-3 pl-3">
-            <HeartOutlined classID="product text-md pl-3 mt-3" />
+
+          {/* Heart & tag */}
+          <div className="heart flex items-center justify-between mt-2 pt-3 px-3">
+            <div className="tag bg-red-500 w-16 text-xs text-white rounded-lg   h-5 text-center ">Hot Deal</div>
+
+          <div className=" ">
+            <HeartOutlined classID="cursor-pointer product text-md pl-3 mt-3" />
           </div>
+
+          </div>
+         
           <Image
             src="/apple watch.png"
             alt="apple watch"

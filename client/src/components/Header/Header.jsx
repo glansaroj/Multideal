@@ -27,7 +27,7 @@ function Header() {
 
 
   return (
-    <div className="bg-slate-900 h-32 py-0  shadow-sm flex flex-row justify-between items-center">
+    <div className="bg-slate-900 h-24 py-0  sticky shadow-sm flex flex-row justify-between items-center">
     
       <div className="logo">
         <a href="/">

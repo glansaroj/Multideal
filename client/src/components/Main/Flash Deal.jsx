@@ -11,7 +11,7 @@ function FlashDeal() {
         </div>
 
 
-        <div className='flash product flex justify-between mt-8'>
+        <div className='flash product flex justify-between  flex-wrap mt-8'>
 
 
         <Product />
@@ -19,6 +19,8 @@ function FlashDeal() {
         <Product />
         <Product />
         <Product />
+      
+
 
         </div>
 
