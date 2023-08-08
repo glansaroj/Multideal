@@ -27,7 +27,7 @@ function Header() {
 
 
   return (
-    <div className="bg-slate-900 h-24 py-0  sticky shadow-sm flex flex-row justify-between items-center">
+    <div className="bg-slate-900 h-24 py-0 top-0 sticky shadow-sm flex flex-row justify-between items-center">
     
       <div className="logo">
         <a href="/">
@@ -87,8 +87,7 @@ function Header() {
         </Link>)
         : 
         
-        
-
+      
         <>  
          
       {/* <------ User login Start -------> */}
@@ -103,6 +102,8 @@ function Header() {
           </Link>
           <Link href="/auth/Register"> Register</Link>
         </div>
+
+      
         </> }
 
 

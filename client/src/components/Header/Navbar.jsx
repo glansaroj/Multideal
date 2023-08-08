@@ -111,7 +111,7 @@ const items = [
 
 function Navbar() {
   return (
-    <div className=' border-t-white mt-0 py-2.5  top-0 bg-slate-800 shadow-md text-white px-12 flex justify-between'>
+    <div className=' border-t-white mt-0 py-2.5  top-24 sticky bg-slate-800 shadow-md text-white px-12 flex justify-between'>
     
     <div className='flex items-center gap-2 '>
 

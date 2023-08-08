@@ -40,6 +40,8 @@ jspm_packages
 #Excluding build directory
 
 
+#uploads file
+**/uploads
 
 
 # environment file

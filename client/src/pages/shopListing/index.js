@@ -7,6 +7,7 @@ import Navbar from "@/components/Header/Navbar";
 import Footer from "@/components/Footer/Footer";
 
 import Link from "next/link";
+import { useState } from "react";
 
 function shopListing() {
   const shopListingSchema = Yup.object().shape({
@@ -30,6 +31,18 @@ function shopListing() {
       // Error messages for requirements
       .matches(/[0-9]/, "Must include a digit!"),
   });
+
+
+  // Handle varification
+  const handleSubmit = async (values) => {
+    console.log(files);
+  };
+
+
+  // File upload
+  const [files, setFile] = useState(null);
+
+  
   return (
     <>
       <Header />
@@ -187,9 +200,27 @@ function shopListing() {
                 ) : null}
               </div>
 
+
+
+              <p className="mb-1 mt-8 text-sm text-gray-400">Upload Your shop Image/Logo here:</p>
+              <Field
+                  className=" px-8 py-4 mt-1 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
+                  name="image"
+                  onChange = {(e) => setFile(e.target.files[0]) }
+                  type="file"
+                  placeholder="Upload your Shop Image"
+                />
+
+
+
+
+
+
+
               <button
                 className="mt-10 tracking-wide font-bold bg-yellow-500 text-gray-800 w-full py-4 rounded-lg hover:bg-gray-800  hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                 type="submit"
+                onClick={handleSubmit}
               >
                 <span class="ml-3">Create Seller Account</span>
               </button>

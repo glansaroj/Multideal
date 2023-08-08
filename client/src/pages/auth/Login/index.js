@@ -9,22 +9,27 @@ import Header from "@/components/Header/Header";
 import Navbar from "@/components/Header/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { useRouter } from "next/router";
-// import Register from "./auth/Login/register";
+import { setUserDetails } from "@/Redux/reducerSlice/users";
+import { useDispatch } from 'react-redux';
+
 
 
 const Login = () => {
   const router = useRouter()
+  const dispatch = useDispatch()
 
 
 // Login Handler
   const handleLogin = async (values) => {
+  const router = useRouter()
+
     try {
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values)
       };
-      const res = await fetch('http://localhost:3000/login', requestOptions)
+      const res = await fetch('http://localhost:3000/auth/Login', requestOptions)
       const data = await res.json()
       if (data && data.success && res.status == 200) {
         dispatch(setUserDetails(data))
@@ -47,7 +52,12 @@ const Login = () => {
 
 
   // Toastify popup
-  const notify = () => toast.success("Successfully Login !");
+  // const notify = () => toast.success("Successfully Login !");
+  const notify = () => {
+   data ?
+      toast.success("Successfully Login"):
+      toast.error("Oops!, This there is error while login.");
+  }
 
   // Login Schema
   const LoginSchema = Yup.object().shape({

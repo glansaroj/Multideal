@@ -25,8 +25,8 @@ const usersSlice = createSlice({
             }
       },
       handleLogout(state, actions) {
-        state= initialState
-        return state
+        state = initialState
+        return state;
       },
 
     },
