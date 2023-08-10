@@ -146,6 +146,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
     - [ ] User account pages
 
 - [ ] II. Extra features & functionality:
+     - [ ] Product add by admin
      - [ ] Add/delete items in cart 
      - [ ] Add/Delete items in a wishlist
      - [ ] pagination
@@ -167,9 +168,9 @@ Here is my ideal roadmap & features checklist for completing this project in a m
  - [X] set users types & roles [Customers, vendor, admin]
  - [X] User password hashing
  - [X] Implement JWT-based authentication
- - [ ] Define entities [vendors, products, orders, customers, admin]
- - [ ] MongoDB collections for diff. entities  
- - [ ] Use Express.js for routing and middleware
+ - [X] Define entities [vendors, products, orders, customers, admin]
+ - [X] MongoDB collections for diff. entities  
+ - [X] Use Express.js for routing and middleware
  - [ ] Develop RESTful API endpoints
  - [ ] User authentication with MongoDB
  - [ ] Implement endpoints for auth, vendor/order management
