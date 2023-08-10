@@ -56,8 +56,16 @@ function shopListing() {
       <div className="container  bg-gray-100 text-gray-900 flex flex-row min-h-screen  w-full justify-center items-center">
         <Formik
           initialValues={{
+            firstName: "",
+            lastName: "",
             phoneNumber: "",
             password: "",
+            confirmPassword: "",
+            address: "",
+            shopName: "",
+            shopAddress: "",
+            logo: "",
+            
           }}
           validationSchema={shopListingSchema}
           onSubmit={(values) => {
