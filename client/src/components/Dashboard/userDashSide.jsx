@@ -18,7 +18,9 @@ import {
 import { Menu, Layout } from "antd";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from 'react-redux';
+// import { handleLogout } from "@/Redux/reducerSlice/users";
 import { handleLogout } from "@/Redux/reducerSlice/users";
+
 
 
 
@@ -105,11 +107,14 @@ const UserDashSidebar = () => {
   const router = useRouter();
   const dispatch = useDispatch()
 
-  const handleLogout = () => {
+
+  const  userLogout = () => {
     dispatch(handleLogout())
-    
-    // router.push("/");
+    router.push("/");
   };
+
+  
+ 
 
   return (
     <div className="w-[full]  px-12 h-[90vh] bg-green-200 shadow-sm  border-2 border-red-500 mt-10  z-10">
@@ -175,10 +180,12 @@ const UserDashSidebar = () => {
               key: 10,
               icon: <LoginOutlined />,
               label: "Logout",
-              onClick: handleLogout,
+              onClick: userLogout,
             },
           ]}
         />
+
+        <button onClick={userLogout}> <LoginOutlined /> Logout </button>
       </Layout>
     </div>
   );

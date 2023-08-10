@@ -6,7 +6,8 @@ const router = express.Router();
 
 // router.get('/email-availabe/:email',UsersController.checkIfUserExists)
 router.post('/register',UsersController.registerUser ) 
-router.post('/auth/Login', UsersController.loginUser)
+router.post('auth/Login', UsersController.loginUser)
+
 
 
 // For ulpoading image

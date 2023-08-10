@@ -21,7 +21,6 @@ const Login = () => {
 
 // Login Handler
   const handleLogin = async (values) => {
-  const router = useRouter()
 
     try {
       const requestOptions = {
@@ -35,6 +34,7 @@ const Login = () => {
         dispatch(setUserDetails(data))
         router.push('/')
         // msg.info(data.msg);
+        toast.success("Successfully Login")
         alert(data.msg)
       } else {
         // msg.info(data.msg);
@@ -43,6 +43,8 @@ const Login = () => {
     } catch (err) {
       // msg.info('Something went wrong!!');
       alert('Something went wrong!!')
+      toast.error("Oops!, This there is error while login.")
+     { console.log(err);}
     }
 
   }
@@ -53,11 +55,11 @@ const Login = () => {
 
   // Toastify popup
   // const notify = () => toast.success("Successfully Login !");
-  const notify = () => {
-   data ?
-      toast.success("Successfully Login"):
-      toast.error("Oops!, This there is error while login.");
-  }
+  // const notify = () => {
+  //  data ?
+  //     toast.success("Successfully Login"):
+  //     toast.error("Oops!, This there is error while login.");
+  // }
 
   // Login Schema
   const LoginSchema = Yup.object().shape({
@@ -95,9 +97,10 @@ const Login = () => {
               password: "",
             }}
             validationSchema={LoginSchema}
-            onSubmit={(values) => {
+            onSubmit={values => {
               // same shape as initial values
-              console.log(values);
+              console.log(values);          
+              handleLogin(values)
               alert("Form is validated! Submitting the form...");
 
             }}
@@ -142,7 +145,7 @@ const Login = () => {
                 <button
                   className="mt-10 tracking-wide font-bold bg-yellow-500 text-gray-800 w-full py-4 rounded-lg hover:bg-slate-800  hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                   type="submit"
-                  onClick={notify}
+                  
                 >
                   <span class="text-md">Login</span>
                 </button>

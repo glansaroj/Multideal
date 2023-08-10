@@ -76,7 +76,7 @@ function Header() {
       {/* Conditional Rendering */}
       {isLoggedIn ? (
         /* <---- AVATAR HERE ------> */
-        <Link href={'/userDashboard'}>
+        <Link href={'/admin'}>
         <Avatar
           className="blue-500 w-11 h-11 mr-2 rounded-xl font-semibold text-xl border-2 border-bg-white"
           size="[30px]"
