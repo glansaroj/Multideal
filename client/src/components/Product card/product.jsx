@@ -10,7 +10,7 @@ const Product = () => {
   return (
     <>
       <div className="productbox flex-col ">
-        <div className="h-[400px] w-[280px] bg-white  ">
+        <div className="h-[380px] w-[280px] bg-white hover:border-[0.5px] cursor-pointer transition duration-700 ease-in-out  ">
 
           {/* Heart & tag */}
           <div className="heart flex items-center justify-between mt-2 pt-3 px-3">
@@ -28,7 +28,7 @@ const Product = () => {
             width={380}
             height={380}
             srcset=""
-            className="-pt-3"
+            className="-pt-3 hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
           />
 
           <div className="discription ml-3 mb-2 -mt-3 ">
@@ -52,7 +52,7 @@ const Product = () => {
             </div>
           </div>
           {/* Button */}
-          <div className="flex justify-center items-center   mt-5">
+          <div className="flex justify-center items-center   mt-4">
             <button className="btn bg-slate-800 hover:bg-yellow-500 duration-300 ease-out text-white w-[280px] py-2 ">
               {" "}
               <ShoppingCartOutlined classID="add " /> Add to cart

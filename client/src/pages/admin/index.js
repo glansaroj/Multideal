@@ -11,10 +11,12 @@ import {
   ShopOutlined,
   SettingOutlined,
   ShoppingCartOutlined,
-
+  PlusCircleFilled,
+  PlusOutlined,
 
 } from '@ant-design/icons';
 import { Layout, Menu, Button, theme } from 'antd';
+
 
 
 
@@ -22,6 +24,7 @@ const { Header, Sider, Content } = Layout;
 
 const Admin = () => {
   const [file, setFile] = useState(null)
+
   const handleAddProducts = (values) => {
     const data = new FormData()
 
@@ -36,6 +39,7 @@ const Admin = () => {
         body: data
       })
   }
+
 
   const [collapsed, setCollapsed] = useState(false);
   const {
@@ -167,7 +171,7 @@ const Admin = () => {
                     ) : null}
 
 
-                    <p className="mt-4  text-sm text-gray-400 text-left"> Product categories:</p>
+                    <p className="mt-5  text-sm text-gray-400 text-left"> Product categories:</p>
                     <Field
                       className="w-full   px-4 py-4  focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
                       name="category"
@@ -179,7 +183,7 @@ const Admin = () => {
 
 
 
-                    <p className="mt-4  text-sm text-gray-400 text-left"> Product Price:</p>
+                    <p className="mt-5  text-sm text-gray-400 text-left"> Product Price:</p>
                     <Field
                       className="w-full   px-4 py-4  focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
                       name="price"
@@ -191,7 +195,7 @@ const Admin = () => {
                     ) : null}
 
 
-                    <p className="mt-4  text-sm text-gray-400 text-left"> Product Quantity:</p>
+                    <p className="mt-5  text-sm text-gray-400 text-left"> Product Quantity:</p>
                     <Field
                       className="w-full   px-4 py-4  focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
                       name="quantity"
@@ -203,7 +207,7 @@ const Admin = () => {
                     ) : null}
 
 
-                    <p className="mt-4  text-sm text-gray-400 text-left"> Product Description:</p>
+                    <p className="mt-5  text-sm text-gray-400 text-left"> Product Description:</p>
                     <Field
                       className="w-full   px-4 py-4  focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
                       name="description"
@@ -222,16 +226,29 @@ const Admin = () => {
 
 
 
-                    <p className="mt-4  text-sm text-gray-400 text-left"> Product Image :</p>
+                    <p className="mt-5  text-sm text-gray-400 text-left"> Product Image :</p>
 
-                    <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+                    {/* <input type="file" onChange={(e) => setFile(e.target.files[0])} /> */}
+                    <Field
+                      className=" px-4 py-4 mt-1 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
+                      name="image"
+                      onChange={(e) => setFile(e.target.files[0])}
+                      type="file"
+                      placeholder="Upload your Shop Image"
+                    />
 
                     <button
                       className="mt-10  text-md font-semibold bg-slate-800 text-white w-full py-5 rounded-lg hover:bg-yellow-500  hover:text-white transition-all duration-500 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                       type="submit"
                     // onClick={handleSubmit}
                     >
-                      Add Product
+                      <PlusOutlined className='ml-2 text-md text-white text-semibold' />
+                      <span className='ml-2'>
+                        Add Product
+
+
+                      </span>
+
 
                     </button>
                   </div>

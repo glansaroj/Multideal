@@ -5,6 +5,16 @@ import Link from 'next/link';
 import { AiOutlineRight } from "react-icons/ai";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { AiOutlineMenu } from "react-icons/ai";
+import { StarOutlined,
+  ContainerOutlined,
+  LaptopOutlined,
+  HomeOutlined,
+  ReadOutlined,
+  RestOutlined,
+  TabletOutlined,
+  SkinOutlined,
+  TrophyOutlined,
+ } from '@ant-design/icons';
 
 
 
@@ -16,13 +26,18 @@ const items = [
   {
     key: '1',
     label: (
+      
+
       <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
         Hot Promotion
       </a>
+    
     ),
+    icon:   <StarOutlined />
 
   },
   {
+    icon: <ContainerOutlined />,
     key: '2',
     label: (
       <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
@@ -33,6 +48,7 @@ const items = [
    
   },
   {
+    icon: <LaptopOutlined />,
     key: '3',
     label: (
       <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
@@ -42,6 +58,7 @@ const items = [
     
   },
   {
+    icon: <SkinOutlined />,
     key: '4',
     label: (
       <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
@@ -52,6 +69,7 @@ const items = [
   },
 
   {
+    icon: <HomeOutlined />,
     key: '5',
     label: (
       <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
@@ -62,6 +80,7 @@ const items = [
   },
 
   {
+    icon: <ReadOutlined />,
     key: '6',
     label: (
       <a c target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
@@ -72,6 +91,7 @@ const items = [
   },
 
   {
+    icon: <RestOutlined />,
     key: '7',
     label: (
       <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
@@ -82,6 +102,7 @@ const items = [
   },
 
   {
+    icon: <TabletOutlined />,
     key: '8',
     label: (
       <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
@@ -92,6 +113,7 @@ const items = [
   },
 
   {
+    icon: <TrophyOutlined />,
     key: '9',
     label: (
       <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
@@ -128,7 +150,7 @@ function Navbar() {
   >
     <a onClick={(e) => e.preventDefault()}>
       <Space>
-    <h1 className='font-medium text-lg'>  Shopping Categories</h1>
+    <h1 className='font-medium text-lg cursor-pointer '>  Shopping Categories</h1>
         
         {/* <DownOutlined /> */}
       </Space>

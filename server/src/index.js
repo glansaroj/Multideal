@@ -11,15 +11,17 @@ const productRoute = require('./routes/products')
 
 
 
+
 connection()
 const app = express()
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5000;
 app.use(express.json())
 
 // converting body to json format
 const cors=require('cors');
 app.use(cors());
 app.use("/",userRoute)
+app.use("/",productRoute)
 
 
 

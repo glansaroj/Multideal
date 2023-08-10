@@ -41,7 +41,7 @@ jspm_packages
 
 
 #uploads file
-**/uploads
+# **/uploads
 
 
 # environment file
