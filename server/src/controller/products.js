@@ -14,21 +14,21 @@ const addNewProducts = async(req,res)=>{
   }
 
 
+const getAllProducts = async(req,res)=>{
+    const data =  await Products.find()
+    if(data){
+     res.json({
+       data,
+       msg: 'success'
+     })
+    }  
+ 
+   }
 
-module.exports = {addNewProducts};
+
+module.exports = {addNewProducts, getAllProducts};
 
 
-
-// const getAllProducts = async(req,res)=>{
-//    const data =  await Products.find()
-//    if(data){
-//     res.json({
-//       data,
-//       msg: 'success'
-//     })
-//    }  
-
-//   }
 
 //   const getProductImageById = async(req,res)=> {
 //     const data =  await Products.findById(req.params.id)

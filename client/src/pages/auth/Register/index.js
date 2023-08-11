@@ -84,7 +84,7 @@ const Register = () => {
 
 //* FIXING ON THIS PART -------->
 
-  const res = await fetch('http://localhost:4000/register',requestOptions)
+  const res = await fetch('http://localhost:5000/register',requestOptions)
   const data = await res.json()
   
   if(data && res.status == 200) {

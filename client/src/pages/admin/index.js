@@ -16,6 +16,10 @@ import {
 
 } from '@ant-design/icons';
 import { Layout, Menu, Button, theme } from 'antd';
+import { useRouter } from "next/router";
+import { useDispatch, useSelector } from 'react-redux';
+import { handleLogout } from "@/Redux/reducerSlice/users";
+
 
 
 
@@ -47,9 +51,21 @@ const Admin = () => {
     }
   } = theme.useToken();
 
+
+  // Logout handle
+  const { isLoggedIn, userDetails } = useSelector(state => state.users)
+  const router = useRouter();
+  const dispatch = useDispatch()
+
+  const  adminLogout = () => {
+    dispatch(handleLogout())
+    router.push("/");
+  };
+
+
   return (
     <Layout>
-      <Sider className='' trigger={null} collapsible collapsed={collapsed}>
+      <Sider className='sticky top-0' trigger={null} collapsible collapsed={collapsed}>
 
         <div className="demo-logo-vertical sticky mt-0 " />
 
@@ -61,7 +77,7 @@ const Admin = () => {
           mode="inline"
           defaultSelectedKeys={['1']}
           style={"backgroundColor" - 'yellow'}
-          className='sticky mt-0'
+          className='my-4 text-[14px] mt-6'
 
           items={[
 
@@ -100,7 +116,7 @@ const Admin = () => {
               key: '6',
               icon: <LoginOutlined />,
               label: "Logout",
-              // onClick: userLogout,
+              onClick: adminLogout,
             },
 
 
@@ -153,7 +169,7 @@ const Admin = () => {
               {({ errors, touched }) => (
 
                 // Custom 
-                <Form className="h-[750px] w-[550px] bg-gray-200 bg-opacity-30 rounded-md shadow-md py-8 my-3 px-10 mb-20">
+                <Form className="h-[780px] w-[550px] bg-gray-200 bg-opacity-30 rounded-md shadow-md py-8 my-3 px-10 mb-20">
 
 
 
@@ -238,11 +254,11 @@ const Admin = () => {
                     />
 
                     <button
-                      className="mt-10  text-md font-semibold bg-slate-800 text-white w-full py-5 rounded-lg hover:bg-yellow-500  hover:text-white transition-all duration-500 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                      className="mt-10   text-md font-semibold bg-slate-800 text-white w-full py-5 rounded-lg hover:bg-yellow-500  transition-all duration-500 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                       type="submit"
                     // onClick={handleSubmit}
                     >
-                      <PlusOutlined className='ml-2 text-md text-white text-semibold' />
+                      <PlusOutlined className='ml-2 text-md   text-white text-semibold' />
                       <span className='ml-2'>
                         Add Product
 

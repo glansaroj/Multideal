@@ -10,7 +10,7 @@ const Product = () => {
   return (
     <>
       <div className="productbox flex-col ">
-        <div className="h-[380px] w-[280px] bg-white hover:border-[0.5px] cursor-pointer transition duration-700 ease-in-out  ">
+        <div className="h-[380px] w-[280px] bg-white hover:border-[0.5px] transition duration-1000 ease-in-out cursor-pointer   ">
 
           {/* Heart & tag */}
           <div className="heart flex items-center justify-between mt-2 pt-3 px-3">
