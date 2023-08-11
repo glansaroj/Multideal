@@ -10,7 +10,7 @@ const Product = () => {
   return (
     <>
       <div className="productbox flex-col ">
-        <div className="h-[380px] w-[280px] bg-white hover:border-[0.5px] transition duration-1000 ease-in-out cursor-pointer   ">
+        <div className=" h-[365px] w-[280px] bg-white hover:outline hover:outline-yellow-500 hover:outline-1  transition duration-1000 ease-in-out cursor-pointer   ">
 
           {/* Heart & tag */}
           <div className="heart flex items-center justify-between mt-2 pt-3 px-3">
@@ -28,10 +28,10 @@ const Product = () => {
             width={380}
             height={380}
             srcset=""
-            className="-pt-3 hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+            className="-pt-5 hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
           />
 
-          <div className="discription ml-3 mb-2 -mt-3 ">
+          <div className="discription ml-3 mb-2 -mt-4 ">
             <h1 className="text-slate-800 font-normal text-lg mt-0 ">
               Apple watch series 8
             </h1>
@@ -42,7 +42,7 @@ const Product = () => {
               </p>
             </div>
 
-            <div>
+            <div className="pb-2">
               {" "}
               <StarFilled className="text-yellow-500 text-sm" />{" "}
               <StarFilled className="text-yellow-500 text-sm" />{" "}
@@ -52,10 +52,10 @@ const Product = () => {
             </div>
           </div>
           {/* Button */}
-          <div className="flex justify-center items-center   mt-4">
-            <button className="btn bg-slate-800 hover:bg-yellow-500 duration-300 ease-out text-white w-[280px] py-2 ">
+          <div className="flex  justify-center items-center   -mt-1.5">
+            <button className="btn bg-slate-800 hover:outline hover:bg-yellow-500 hover:outline-yellow-500 hover:outline-1  transition duration-500  flex  gap-2 justify-center items-center ease-out text-white w-[280px] py-2.5 ">
               {" "}
-              <ShoppingCartOutlined classID="add " /> Add to cart
+              <ShoppingCartOutlined classID="add mr-2" />  Add to cart
             </button>
           </div>
         </div>

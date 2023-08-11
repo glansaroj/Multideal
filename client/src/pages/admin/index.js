@@ -31,7 +31,6 @@ const Admin = () => {
 
   const handleAddProducts = (values) => {
     const data = new FormData()
-
     Object.entries(values).forEach((item) => {
       data.append(item[0], item[1])
     })
