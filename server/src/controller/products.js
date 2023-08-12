@@ -26,7 +26,22 @@ const getAllProducts = async(req,res)=>{
    }
 
 
-module.exports = {addNewProducts, getAllProducts};
+   const getProductImageById = async(req,res)=> {
+    const data =  await Products.findById(req.params.id)
+    const imageDir = path.join(__dirname,'../../','uploads/'+ data.productImage) 
+    // const defaultDir = path.join(__dirname,'../../','uploads//nobike.jpeg') 
+
+    if(fs.existsSync( imageDir )){
+        res.sendFile(imageDir)
+    }else{
+        // res.sendFile('Oops, Filed to load!!')
+        console.log('Oops, Filed to load');
+    }
+   
+  }
+
+
+module.exports = {addNewProducts, getAllProducts, getProductImageById};
 
 
 

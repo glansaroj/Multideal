@@ -23,6 +23,7 @@ const upload = multer({ storage: storage })
 
 // Endpoints --->
 router.post("/products", upload.single('product'), ProductsController.addNewProducts)
+router.get('/product-img/:id', ProductsController.getProductImageById)
 router.get('/products',ProductsController.getAllProducts)
 
 
