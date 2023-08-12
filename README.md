@@ -139,14 +139,14 @@ Here is my ideal roadmap & features checklist for completing this project in a m
     - [X] vendor/ shop listing form
     - [X] Shopping cart
     - [X] Wishlist
-    - [ ] Product listing pages
+    - [X] Product listing pages
     - [ ] Product detail pages
-    - [ ] product categories 
+    - [X] product categories 
     - [ ] Checkout process
     - [ ] User account pages
 
 - [ ] II. Extra features & functionality:
-     - [ ] Product add by admin
+     - [X] Product add by admin
      - [ ] Add/delete items in cart 
      - [ ] Add/Delete items in a wishlist
      - [ ] pagination
@@ -172,7 +172,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
  - [X] MongoDB collections for diff. entities  
  - [X] Use Express.js for routing and middleware
  - [ ] Develop RESTful API endpoints
- - [ ] User authentication with MongoDB
+ - [X] User authentication with MongoDB
  - [ ] Implement endpoints for auth, vendor/order management
  - [ ] Validate user credentials using MongoDB queries
  - [ ] Vendor management with MongoDB
