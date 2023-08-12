@@ -5,6 +5,7 @@ import logger from "redux-logger";
 import users from "../reducerSlice/users";
 // import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
+import products from "../reducerSlice/products";
 
 
 
@@ -45,6 +46,8 @@ const persistConfig = {
 // Combining store
 const reducer = combineReducers({
   users,
+  products,
+
 });
 
 

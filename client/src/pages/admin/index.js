@@ -19,6 +19,10 @@ import { Layout, Menu, Button, theme } from 'antd';
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from 'react-redux';
 import { handleLogout } from "@/Redux/reducerSlice/users";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 
 
 
@@ -61,6 +65,12 @@ const Admin = () => {
     router.push("/");
   };
 
+
+  const addProductAlert = () => {
+    toString.success('Product added successfully')
+  }
+
+ 
 
   return (
     <Layout>
@@ -161,8 +171,12 @@ const Admin = () => {
               }}
               onSubmit={values => {
                 handleAddProducts(values)
+                toast.success("Added new product successfully.")
+
               }}
             >
+               
+
 
 
               {({ errors, touched }) => (
@@ -255,7 +269,7 @@ const Admin = () => {
                     <button
                       className="mt-10   text-md font-semibold bg-slate-800 text-white w-full py-5 rounded-lg hover:bg-yellow-500  transition-all duration-500 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                       type="submit"
-                    // onClick={handleSubmit}
+                    onClick={addProductAlert}
                     >
                       <PlusOutlined className='ml-2 text-md   text-white text-semibold' />
                       <span className='ml-2'>
@@ -266,6 +280,19 @@ const Admin = () => {
 
 
                     </button>
+                    <ToastContainer 
+                   position="top-center"
+
+                  autoClose={4000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                  theme="light"
+                />
                   </div>
                 </Form>
               )}

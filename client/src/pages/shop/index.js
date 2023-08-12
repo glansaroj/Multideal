@@ -6,11 +6,20 @@ import {
     StarFilled,
     ShoppingCartOutlined,
     HeartOutlined,
+    HeartFilled,
 } from "@ant-design/icons";
+import { Skeleton } from 'antd';
+import { addToCartList, addToWishList } from '@/Redux/reducerSlice/products';
+import { useDispatch } from 'react-redux';
 
 
 
 const Shop = () => {
+    <Skeleton active />
+
+    const dispath = useDispatch();
+
+
     // Fetching all product
     const [products, setProducts] = useState([])
     const fetchProducts = async () => {
@@ -22,6 +31,13 @@ const Shop = () => {
     useEffect(() => {
         fetchProducts()
     }, [])
+
+
+    // For Wishlist icon change  
+   const [clicked, setClicked] = useState(false);
+   function handleClick(id) {
+    setClicked(!clicked);
+ }
 
     return (
         <>
@@ -41,8 +57,10 @@ const Shop = () => {
                                     <div className="heart flex items-center justify-between mt-2 pt-3 px-3">
                                         <div className="tag bg-red-500 w-16 text-xs text-white rounded-lg   h-5 text-center ">Hot Sale</div>
 
-                                        <div className=" hover:scale-125">
-                                            <HeartOutlined classID="cursor-pointer  product text-md pl-3 mt-3" />
+                                        <div onClick={()=> dispath(addToWishList(item._id))} className=" hover:scale-125">
+                                            {clicked ?
+                                            <HeartFilled onClick={handleClick} className='text-rose-400' /> :
+                                            <HeartOutlined onClick={handleClick} className="cursor-pointer text-rose-400 product text-md pl-3 mt-3" />} 
                                         </div>
 
                                     </div>
@@ -81,27 +99,27 @@ const Shop = () => {
 
                                     {/* Button */}
                                     <div className="flex  justify-center items-center   -mt-1.5">
-                                        <button className="btn bg-slate-800 hover:outline hover:bg-yellow-500 hover:outline-yellow-500 hover:outline-1  transition duration-500  flex  gap-2 justify-center items-center ease-out text-white w-[280px] py-2.5 ">
+                                        <button onClick={() => dispath(addToCartList(item._id))} className="btn bg-slate-800 hover:outline hover:bg-yellow-500 hover:outline-yellow-500 hover:outline-1  transition duration-500  flex  gap-2 justify-center items-center ease-out text-white w-[280px] py-2.5 ">
                                             {" "}
                                             <ShoppingCartOutlined classID="add mr-2" />  Add to cart
                                         </button>
                                     </div>
 
                                 </div>
-                            </div>
+                            </div> <Skeleton /> 
                             </div>
                             
                             
                         })}
 
 
-                    </div>
+                    </div> 
 
-                ) : 'Loading'}
+                ) : 'Loading'} 
 
 
 
-            </div>
+            </div>   
 
             <Footer />
         </>

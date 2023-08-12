@@ -13,6 +13,8 @@ import { handleLogout } from "@/Redux/reducerSlice/users";
 import Navbar from "./Navbar";
 // import Logo from '/client/public/MDlogo.png'
 import Image from "next/image";
+import Wishlist from "@/pages/wishlist";
+
 
 
 
@@ -24,6 +26,9 @@ function Header() {
     dispatch(handleLogout());
   };
   const { isLoggedIn, userDetails } = useSelector((state) => state.users);
+
+  const {cartList} = useSelector((state) => state.products)
+  const {wishList} = useSelector((state) => state.products)
 
 
   return (
@@ -54,7 +59,7 @@ function Header() {
           </Link>
 
           <div className="counter bg-yellow-500 w-5 h-5 rounded-full ml-9 mb-8 absolute flex items-center justify-center">
-            <p className="font-semibold text-slate-800"> 4</p>
+            <p className="font-semibold text-slate-800"> {wishList.length}</p>
           </div>
         </div>
 
@@ -66,7 +71,7 @@ function Header() {
           </Link>
 
           <div className="counter bg-yellow-500 w-5 h-5 rounded-full ml-9 mb-8 absolute flex items-center justify-center">
-            <p className="font-semibold text-slate-800"> 1</p>
+            <p className="font-semibold text-slate-800"> {cartList.length}</p>
           </div>
         </div>
       </div>
