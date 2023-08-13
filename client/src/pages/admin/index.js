@@ -21,14 +21,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { handleLogout } from "@/Redux/reducerSlice/users";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-
-
+import AddProduct from '@/components/Dashboard/AddProduct';
+import Dashboard from '@/components/Dashboard/Dashboard';
 
 
 
 
 const { Header, Sider, Content } = Layout;
+
 
 const Admin = () => {
   const [file, setFile] = useState(null)
@@ -60,17 +60,22 @@ const Admin = () => {
   const router = useRouter();
   const dispatch = useDispatch()
 
-  const  adminLogout = () => {
+  const adminLogout = () => {
     dispatch(handleLogout())
     router.push("/");
   };
 
+const [tabId, setTabId] = useState(1);
 
-  const addProductAlert = () => {
-    toString.success('Product added successfully')
+  const onChange = (key) => {
+    setTabId(key.key);
   }
 
- 
+  const addProductAlert = () => {
+    toast.success('Product added successfully')
+  }
+
+
 
   return (
     <Layout>
@@ -87,6 +92,7 @@ const Admin = () => {
           defaultSelectedKeys={['1']}
           style={"backgroundColor" - 'yellow'}
           className='my-4 text-[14px] mt-6'
+          onClick={onChange}
 
           items={[
 
@@ -157,10 +163,18 @@ const Admin = () => {
           }}
         >
 
-          <h1 className='text-center text-2xl mb-2 font-bold text-slate-800'>Add new product</h1>
+
+          {tabId == 1 ? <Dashboard /> : null}
+          {tabId == 2 ? <AddProduct /> : null}
+          {tabId == 3 ? <ManageShop /> : null}
+          {tabId == 4 ? <OrderTracking /> : null}
+          {tabId == 5 ? <Setting /> : null}
+          
+
+          {/* <h1 className='text-center text-2xl mb-2 font-bold text-slate-800'>Add new product</h1> */}
 
 
-          <div className='add-product flex items-center justify-center'>
+       { /*  <div className='add-product flex items-center justify-center'>
             <Formik
               initialValues={{
                 productName: '',
@@ -175,7 +189,7 @@ const Admin = () => {
 
               }}
             >
-               
+
 
 
 
@@ -258,7 +272,7 @@ const Admin = () => {
                     <p className="mt-5  text-sm text-gray-400 text-left"> Product Image :</p>
 
                     {/* <input type="file" onChange={(e) => setFile(e.target.files[0])} /> */}
-                    <Field
+                    {/* <Field
                       className=" px-4 py-4 mt-1 focus:border-yellow-500  rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none  focus:bg-white"
                       name="image"
                       onChange={(e) => setFile(e.target.files[0])}
@@ -269,7 +283,7 @@ const Admin = () => {
                     <button
                       className="mt-10   text-md font-semibold bg-slate-800 text-white w-full py-5 rounded-lg hover:bg-yellow-500  transition-all duration-500 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                       type="submit"
-                    onClick={addProductAlert}
+                      onClick={addProductAlert}
                     >
                       <PlusOutlined className='ml-2 text-md   text-white text-semibold' />
                       <span className='ml-2'>
@@ -280,24 +294,25 @@ const Admin = () => {
 
 
                     </button>
-                    <ToastContainer 
-                   position="top-center"
+                    <ToastContainer
+                      position="top-center"
 
-                  autoClose={4000}
-                  hideProgressBar={false}
-                  newestOnTop={false}
-                  closeOnClick
-                  rtl={false}
-                  pauseOnFocusLoss
-                  draggable
-                  pauseOnHover
-                  theme="light"
-                />
+                      autoClose={4000}
+                      hideProgressBar={false}
+                      newestOnTop={false}
+                      closeOnClick
+                      rtl={false}
+                      pauseOnFocusLoss
+                      draggable
+                      pauseOnHover
+                      theme="light"
+                    />
                   </div>
                 </Form>
               )}
             </Formik>
-          </div>
+          </div>   */} 
+          
         </Content>
       </Layout>
     </Layout>

@@ -21,7 +21,7 @@ const ShoppingCart = () => {
 
           <h3 className='text-lg -mt-5 text-slate-800 font-bold '>Your cart is currently empty.</h3>
 
-          <a className='bg-yellow-500 px-7 hover:bg-slate-800 text-white transition-3s font-semibold rounded-md shadow-md mt-5 py-3' href="">Back to Shop </a>
+          <a className='bg-slate-800 px-7  hover:bg-yellow-500 text-white transition duration-500 font-semibold rounded-md shadow-md mt-5 py-3' href="">Back to Shop </a>
 
 
 
