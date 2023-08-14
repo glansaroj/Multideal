@@ -107,7 +107,7 @@ const [tabId, setTabId] = useState(1);
             {
               key: '2',
               icon: <ShoppingOutlined />,
-              label: 'Add Product',
+              label: 'Manage Product',
             },
             {
               key: '3',

@@ -12,6 +12,7 @@ import Login from './auth/Login';
 import Hero from '@/components/Header/hero';
 import Footer from '@/components/Footer/Footer';
 import FlashDeal from '@/components/Main/Flash Deal';
+import Catagories from '@/components/ProductCatagories/Catagories';
 // import Register from './auth/Register';
 
 
@@ -31,6 +32,8 @@ export default function Home() {
       <Header />
       <Navbar />
       <Hero />
+
+      <Catagories />
 
 
 
