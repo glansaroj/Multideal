@@ -13,6 +13,8 @@ import Hero from '@/components/Header/hero';
 import Footer from '@/components/Footer/Footer';
 import FlashDeal from '@/components/Main/Flash Deal';
 import Catagories from '@/components/ProductCatagories/Catagories';
+import Banner from '@/components/Main/Banner';
+import Features from '@/components/Footer/Features';
 // import Register from './auth/Register';
 
 
@@ -34,16 +36,13 @@ export default function Home() {
       <Hero />
 
       <Catagories />
-
-
-
-
       <FlashDeal />
+      <Banner />
+      <Features />
 
-      {/* <div className='banner mt-7 w-full'>
-      < Image  src='/Banner2.jpg' width={1500}  height={500} />
+      
 
-      </div> */}
+   
       <Footer />
 
 

@@ -13,6 +13,7 @@ import { addToCartList, addToWishList } from '@/Redux/reducerSlice/products';
 import { useDispatch } from 'react-redux';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Products from '../products';
 
 
 
@@ -40,11 +41,14 @@ const Shop = () => {
     }
 
 
-    // let product = String(products.productName);
-    const addToCart = () => {
-        dispath(addToCartList(products._id));
-        toast.success(`New product added to cart`);
-    }
+   
+   
+    // const addToCart = () => {
+    //     dispath(addToCartList(products._id));
+        
+    //     console.log(products._id);
+    //     toast.success(`${Products.productName} added to cart`);
+    // }
 
 
     const addToWish = () => {
@@ -58,7 +62,7 @@ const Shop = () => {
     return (
         <>
            
-            <Header />
+            <Header   />
             <div className="bg-indigo-50 h-2000px] w-full   -mt-7  px-12 py-10">
 
                 {/* Card Ternery  */}
@@ -116,7 +120,7 @@ const Shop = () => {
 
                                         {/* Button */}
                                         <div className="flex  justify-center items-center   -mt-1.5">
-                                            <button onClick={addToCart} className="btn bg-slate-800 hover:outline hover:bg-yellow-500 hover:outline-yellow-500 hover:outline-1  transition duration-500  flex  gap-2 justify-center items-center ease-out text-white w-[280px] py-2.5 ">
+                                            <button onClick={() => dispath(addToCartList({ID: item._id, title: item.productName, price: item.price, image: item.productImage}))} className="btn bg-slate-800 hover:outline hover:bg-yellow-500 hover:outline-yellow-500 hover:outline-1  transition duration-500  flex  gap-2 justify-center items-center ease-out text-white w-[280px] py-2.5 ">
                                                 {" "}
                                                 <ShoppingCartOutlined classID="add mr-2" />  Add to cart
                                             </button>

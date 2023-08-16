@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 // Initail state
 export const initialState = {
     wishList: [],
-    cartList: []
+    cartList: [],
 
 };
 

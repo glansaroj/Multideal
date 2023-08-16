@@ -5,7 +5,7 @@ function Footer() {
     <>
 
     <div className='flex justify-center'>
-    <hr className='mt-32 w-11/12  '/>
+    <hr className='mt-20 w-11/12  '/>
     </div>
 
            {/* <!-- FOOTER --> */}

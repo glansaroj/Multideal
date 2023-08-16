@@ -46,42 +46,35 @@ function Header() {
 
   return (
     <>
-    {/* //TODO: Need to Fix this part ------????? */}
+      {/* //TODO: Need to Fix this part ------????? */}
       <Drawer
         title="SHOPPING CART"
         placement="right"
         onClose={onClose}
         open={open}
       >
-        {wishList.map((a) => {
+        {cartList.map((item) => {
           return (
             <>
-              <div className="flex justify-between">
-                <div className="grow">Image</div>
+              <div className="flex items-center justify-between px-2">
+                <div className="flex-grow-0 flex items-center justify-center">
+                  <Image src={item.image} width={70} height={70}></Image>
+                </div>
 
-                <div className="name flex-grow">
+                <div className="flex-grow ">
                   <h1 className="text-slate-800 font-semibold text-lg">
                     {" "}
-                    Hawkins Cooker
+                    {item.title}
+                    {/* Hawkins */}
                   </h1>
                   <h2 className="text-yellow-500 text-md font-normal">
-                    Rs.5500{" "}
+                    {item.price}
                     <span className="text-slate-800 font-md text-sm"> * 1</span>
                   </h2>
                 </div>
-
-{/* 
-                <div>
-                  <button> <SearchOutlined /> </button>     
-                </div> */}
-
-
-               
-              
-
               </div>
-              <hr  className="mt-5"/>
 
+              <hr className="mt-5" />
             </>
           );
         })}

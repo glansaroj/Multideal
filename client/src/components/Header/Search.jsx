@@ -4,7 +4,7 @@ function Search() {
   return (
     <div >
        
-       <input className="w-96  py-2.5 px-10"
+       <input className="w-96  py-2.5 px-10 focus:outline-none "
           placeholder="I'm Shopping for "
           title='Search bar'
         />

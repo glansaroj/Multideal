@@ -5,7 +5,7 @@ import Link from "next/link";
 function FlashDeal() {
  
   return (
-    <div className="bg-indigo-50 h-[1500px] w-full  mt-20 shadow-sm px-12">
+    <div className="bg-indigo-50 h-[630px] w-full  mt-20 shadow-sm px-12">
       <div className="title flex  justify-between items-center pt-7">
         <div className="flex deal justify-between items-center">
           <span className="py-7 px-1.5  bg-yellow-500"></span>

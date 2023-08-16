@@ -167,7 +167,7 @@ function Navbar() {
 
     <div className='font-normal text-base gap-10'>
         <a className='' href=''>Home</a>
-        <a className='ml-8' href=''>Shop</a>
+        <Link className='ml-8' href='/shop'>Shop</Link>
         <a className='ml-8' href=''>Pages</a>
         <a className='ml-8' href=''>Customer Service</a>
      <a className='ml-8' href=''>My order</a>
