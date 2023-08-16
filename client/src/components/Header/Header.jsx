@@ -1,8 +1,9 @@
+"use client";
+
 import React, { useState } from "react";
 import Search from "./Search";
 import Head from "next/head";
 import Link from "next/link";
-// import Wishlist from "./Wishlist";
 import {
   AiOutlineUser,
   AiOutlineHeart,
@@ -44,6 +45,12 @@ function Header() {
     setOpen(false);
   };
 
+  let subTotal = 0;
+  for(let {price} of cartList) {
+    subTotal+= price;
+  }
+
+
   return (
     <>
       {/* //TODO: Need to Fix this part ------????? */}
@@ -56,9 +63,16 @@ function Header() {
         {cartList.map((item) => {
           return (
             <>
-              <div className="flex items-center justify-between px-2">
-                <div className="flex-grow-0 flex items-center justify-center">
-                  <Image src={item.image} width={70} height={70}></Image>
+             
+              <div className="flex items-center justify-between mt-3 px-2">
+                <div className="flex-grow-0 -ml-5 flex items-center justify-center">
+                  <Image
+                    // src={'http://localhost:5000/product-img/64d62d265618ef42bc171ea9'}
+                    src={'http://localhost:5000/product-img/' + item.ID}
+                    width={50}
+                    height={70}
+                    // alt="(item.title)"
+                  ></Image>
                 </div>
 
                 <div className="flex-grow ">
@@ -72,6 +86,11 @@ function Header() {
                     <span className="text-slate-800 font-md text-sm"> * 1</span>
                   </h2>
                 </div>
+
+               
+                
+                  {/* <button>  <CloseOutlined /> </button> */}
+               
               </div>
 
               <hr className="mt-5" />
@@ -80,10 +99,11 @@ function Header() {
         })}
 
         <hr className="h-0.5 w-full bg-slate-300 mt-16 " />
+      
 
         <div className="flex py-3 justify-between items-center">
           <h3 className="text-lg font-semibold text-slate-800">Subtotal:</h3>
-          <h2 className="text-xl font-bold text-yellow-500">Rs25000 /-</h2>
+          <h2 className="text-xl font-bold text-yellow-500">Rs. {subTotal}/- </h2>
         </div>
 
         <button className="w-full hover:bg-yellow-500 rounded-sm  font-semibold shadow-md mt-6 py-3 bg-slate-800 transition duration-400 text-white text-lg ">
