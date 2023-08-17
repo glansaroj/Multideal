@@ -1,5 +1,7 @@
 "use client";
 
+"use client";
+
 import React, { useState } from "react";
 import Search from "./Search";
 import Head from "next/head";
@@ -51,6 +53,12 @@ function Header() {
     subTotal += price;
   }
 
+  let subTotal = 0;
+  for(let {price} of cartList) {
+    subTotal+= price;
+  }
+
+
   return (
     <>
       {/* //TODO: Need to Fix this part ------????? */}
@@ -85,6 +93,11 @@ function Header() {
                     <span className="text-slate-800 font-md text-sm"> * 1</span>
                   </h2>
                 </div>
+
+               
+                
+                  {/* <button>  <CloseOutlined /> </button> */}
+               
                 <div className="flex ">
                   <button onClick={() => dispatch(removeFromCart(item)) } className="text-slate-800  hover:text-yellow-500">
                     <CloseOutlined />
@@ -98,6 +111,7 @@ function Header() {
         })}
 
         <hr className="h-0.5 w-full bg-slate-300 mt-16 " />
+      
 
         <div className="flex py-3 justify-between items-center">
           <h3 className="text-lg font-semibold text-slate-800">Subtotal:</h3>
