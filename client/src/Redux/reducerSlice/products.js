@@ -35,9 +35,23 @@ const productsSlice = createSlice({
             }
         },
 
+        removeFromCart: (state, action) => {
+            const initCartList = [...state.cartList];                 
+            const index = initCartList.indexOf(action.payload);   
+            initCartList.splice(index, 1); 
+
+            // TODO: Figure out best way to remove from cartlist for the future pref.
+            // initCartList.filter((item) => item.title !== action.payload.title)
+
+            return {
+                ...state,
+                cartList: initCartList,
+            }
+        },
+
     }
 })
 
 
-export const { addToCartList, addToWishList } = productsSlice.actions;
+export const { addToCartList, addToWishList, removeFromCart } = productsSlice.actions;
 export default productsSlice.reducer;
