@@ -1,4 +1,4 @@
-
+![image](https://github.com/trulysaroj/Multideal/assets/123483889/6b686fd4-36a8-495c-abf9-06fd82c79eae)
 
 
 <!-- PROJECT LOGO -->
@@ -147,7 +147,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
 
 - [ ] II. Extra features & functionality:
      - [X] Product add by admin
-     - [ ] Add/delete items in cart 
+     - [X] Add/delete items in cart 
      - [ ] Add/Delete items in a wishlist
      - [ ] pagination
      - [ ] Product search functionality
@@ -240,8 +240,16 @@ ____
 
 
 
+## 📸 Screenshots
+Here is the screenshot of the sample home page of this project. Remaining parts will be updated as soon as the project will complete.
+<details>
+  <summary>
+    ❖ Home Page
+  </summary>
+<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/Home%20%40MultiDeal.png'>
 
-
+  
+</details>
 
 
 
