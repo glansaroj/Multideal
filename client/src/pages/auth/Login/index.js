@@ -5,8 +5,7 @@ import * as Yup from "yup";
 import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Header from "@/components/Header/Header";
-import Navbar from "@/components/Header/Navbar";
+
 import Footer from "@/components/Footer/Footer";
 import { useRouter } from "next/router";
 import { setUserDetails } from "@/Redux/reducerSlice/users";
@@ -20,56 +19,42 @@ const Login = () => {
 
 
 // Login Handler
-  const handleLogin = async (values) => {
+const handleLogin = async (values) => {
 
-    try {
-      const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(values)
-      };
-      const res = await fetch('http://localhost:3000/auth/Login', requestOptions)
-      const data = await res.json()
-      if (data && data.success && res.status == 200) {
-        dispatch(setUserDetails(data))
-        router.push('/')
-        // msg.info(data.msg);
-        toast.success("Successfully Login")
-        alert(data.msg)
-      } else {
-        // msg.info(data.msg);
-        alert(data.info)
-      }
-    } catch (err) {
-      // msg.info('Something went wrong!!');
-      alert('Something went wrong!!')
-      toast.error("Oops!, This there is error while login.")
-     { console.log(err);}
+  try {
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(values)
+    };
+    const res = await fetch('http://localhost:5000/login', requestOptions)
+    const data = await res.json()
+    if (data && data.success && res.status == 200) {
+      dispatch(setUserDetails(data))
+      router.push('/')
+      // msg.info(data.msg);
+      toast.success("Successfully Login")
+      // alert(data.msg)
+    } else {
+      // msg.info(data.msg);
+      alert(data.info)
     }
-
+  } catch (err) {
+    // msg.info('Something went wrong!!');
+    alert('Something went wrong!!')
+    toast.error("Oops!, This there is error while login.")
+   { console.log(err);}
   }
 
+}
 
 
-
-
-  // Toastify popup
-  // const notify = () => toast.success("Successfully Login !");
-  // const notify = () => {
-  //  data ?
-  //     toast.success("Successfully Login"):
-  //     toast.error("Oops!, This there is error while login.");
-  // }
 
   // Login Schema
   const LoginSchema = Yup.object().shape({
-    email: Yup.string()
-
-      // Format Validation
+    email: Yup.string()  
       .email("Invalid email address")
-      // Required Field Validation
       .required("Email is a required field")
-
       .min(5, "Must be more than 8 characters"),
 
     // Error messages
@@ -101,7 +86,7 @@ const Login = () => {
               // same shape as initial values
               console.log(values);          
               handleLogin(values)
-              alert("Form is validated! Submitting the form...");
+              // alert("Form is validated! Submitting the form...");
 
             }}
           >
@@ -145,13 +130,14 @@ const Login = () => {
                 <button
                   className="mt-10 tracking-wide font-bold bg-yellow-500 text-gray-800 w-full py-4 rounded-lg hover:bg-slate-800  hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                   type="submit"
+                 
                   
                 >
                   <span class="text-md">Login</span>
                 </button>
                 <ToastContainer
                   position="top-center"
-                  autoClose={4000}
+                  autoClose={3000}
                   hideProgressBar={false}
                   newestOnTop={false}
                   closeOnClick

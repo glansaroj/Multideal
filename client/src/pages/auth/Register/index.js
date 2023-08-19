@@ -83,13 +83,12 @@ const Register = () => {
 
 
 //* FIXING ON THIS PART -------->
-
   const res = await fetch('http://localhost:5000/register',requestOptions)
   const data = await res.json()
   
   if(data && res.status == 200) {
     debugger;
-    alert(JSON.stringify(data));
+    console.log((JSON.stringify(data)));
     dispatch(setUserDetails(data))
     alert(data.msg)
     toast.success("Congrats!, Your're Successfully register.")

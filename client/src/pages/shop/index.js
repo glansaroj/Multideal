@@ -36,26 +36,20 @@ const Shop = () => {
 
     // For Wishlist icon change  
     const [clicked, setClicked] = useState(false);
-    function handleClick(id) {
+    function handleClick() {
         setClicked(!clicked);
+        
+
     }
 
 
 
 
-    // const addToCart = () => {
-    //     dispath(addToCartList(products._id));
+    // const addToWish = () => {
+    //     dispath(addToWishList(products._id));
+    //     toast.success(`New product to wish List`);
 
-    //     console.log(products._id);
-    //     toast.success(`${Products.productName} added to cart`);
     // }
-
-
-    const addToWish = () => {
-        dispath(addToWishList(products._id));
-        toast.success(`New product to wish List`);
-
-    }
 
 
 
@@ -78,10 +72,18 @@ const Shop = () => {
                                         <div className="heart flex items-center justify-between mt-2 pt-3 px-3">
                                             <div className="tag bg-red-500 w-16 text-xs text-white rounded-lg   h-5 text-center ">Hot Sale</div>
 
-                                            <div onClick={addToWish} className=" hover:scale-125">
-                                                {clicked ?
+                                            <div onClick={() => {
+                                                // dispath(addToWishList({ ID: item._id, title: item.productName, price: item.price, image: 'http://localhost:5000/product-img/' + item._id }));
+                                                dispath(addToWishList({ID: item._id, title: item.productName, price: item.price, image: 'http://localhost:5000/product-img/' + item._id}));                                      
+                                                toast.success(`${item.productName} added to your Wish List`);
+
+
+                                            }} className=" hover:scale-125">
+                                                    <HeartFilled onClick={handleClick} className='text-rose-400' /> 
+
+                                                {/* {clicked ?
                                                     <HeartFilled onClick={handleClick} className='text-rose-400' /> :
-                                                    <HeartOutlined onClick={handleClick} className="cursor-pointer text-rose-400 product text-md pl-3 mt-3" />}
+                                                    <HeartOutlined onClick={handleClick} className="cursor-pointer text-rose-400 product text-md pl-3 mt-3" />} */}
                                             </div>
 
                                         </div>

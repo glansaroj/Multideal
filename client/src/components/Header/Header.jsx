@@ -37,8 +37,7 @@ function Header() {
   const { cartList } = useSelector((state) => state.products);
   const { wishList } = useSelector((state) => state.products);
 
-  console.log(wishList);
-
+  
   // Shoping cart drawer
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
@@ -48,10 +47,7 @@ function Header() {
     setOpen(false);
   };
 
-  let subTotal = 0;
-  for (let { price } of cartList) {
-    subTotal += price;
-  }
+ 
 
   let subTotal = 0;
   for(let {price} of cartList) {

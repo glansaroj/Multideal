@@ -24,6 +24,18 @@ const productsSlice = createSlice({
 
         },
 
+        removeFromWishList: (state, action) => {
+            let initWishList = [...state.wishList];
+            const removeItem = action.payload;
+            initWishList = initWishList.filter((item) => item.title !== removeItem.title)
+
+            return {
+                ...state,
+                wishList: initWishList,
+            }
+        },
+
+
         addToCartList: (state, action) => {
             const existingCartList = [...state.cartList];
             existingCartList.push(action.payload);
@@ -36,12 +48,12 @@ const productsSlice = createSlice({
         },
 
         removeFromCart: (state, action) => {
-            const initCartList = [...state.cartList];                 
-            const index = initCartList.indexOf(action.payload);   
-            initCartList.splice(index, 1); 
+            let initCartList = [...state.cartList];
+            // const index = initCartList.indexOf(action.payload);   
+            // initCartList.splice(index, 1);
 
-            // TODO: Figure out best way to remove from cartlist for the future pref.
-            // initCartList.filter((item) => item.title !== action.payload.title)
+            const deleteItem = action.payload;
+            initCartList = initCartList.filter((item) => item.title !== deleteItem.title)
 
             return {
                 ...state,
@@ -53,5 +65,5 @@ const productsSlice = createSlice({
 })
 
 
-export const { addToCartList, addToWishList, removeFromCart } = productsSlice.actions;
+export const { addToCartList, addToWishList, removeFromCart, removeFromWishList } = productsSlice.actions;
 export default productsSlice.reducer;

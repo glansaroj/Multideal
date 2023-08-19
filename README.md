@@ -1,4 +1,4 @@
-![image](https://github.com/trulysaroj/Multideal/assets/123483889/6b686fd4-36a8-495c-abf9-06fd82c79eae)
+
 
 
 <!-- PROJECT LOGO -->

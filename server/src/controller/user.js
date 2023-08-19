@@ -1,4 +1,6 @@
 
+
+
 const Users = require('../models/users')
 // Importing bcrypt (pass hasing liabraries)
 const bcrypt = require('bcrypt');
@@ -51,12 +53,13 @@ const registerUser = async (req, res) => {
 
 // LoginUser
 const loginUser = async (req, res) => {
+   
     try {
         const data = await Users.findOne({ email: req.body.email })
         if (data) {
             const isMatched = await bcrypt.compare(req.body.password, data.password)
             if (isMatched) {
-                const token = jwt.sign({ email: req.body.email }, process.env.SECRET_KEY);
+                const token = jwt.sign({ email: req.body.email }, 'process.env.SECRET_KEY');
                 res.json({
                     token: token,
                     success: true,
@@ -79,6 +82,7 @@ const loginUser = async (req, res) => {
     }
 
 }
+
 
 
 module.exports = { registerUser, loginUser };
