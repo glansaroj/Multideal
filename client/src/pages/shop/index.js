@@ -13,7 +13,9 @@ import { addToCartList, addToWishList } from '@/Redux/reducerSlice/products';
 import { useDispatch } from 'react-redux';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Products from '../products';
+// import Products from '../products';
+import Link from 'next/link';
+import ProductDetails from '@/components/Products/ProductsDetails';
 
 
 
@@ -100,9 +102,11 @@ const Shop = () => {
 
                                         {/* Name & Price */}
                                         <div className="discription ml-3 mb-1.5 -mt-4 ">
-                                            <h1 className="text-slate-800 font-normal text-lg mt-0 ">
+                                            <Link href={`/product-details/${item._id}`} key={item._id} component={ProductDetails}> 
+                                            <h1 className="text-slate-800 font-normal hover:text-semibold hover:text-yellow-500 text-lg mt-0 ">
                                                 {item.productName}
                                             </h1>
+                                            </Link>
                                             <div className="flex gap-2 mt-0.5">
                                                 <p className="text-slate-800 text-xl font-semibold">Rs.{item.price}</p>{" "}
                                                 <p className="text-gray-500 text-md line-through font-light">

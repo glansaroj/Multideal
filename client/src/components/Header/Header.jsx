@@ -25,6 +25,7 @@ import Image from "next/image";
 import { Drawer, Button } from "antd";
 import { removeFromCart} from '@/Redux/reducerSlice/products';
 
+
 // Header Components
 function Header() {
   const router = useRouter();
@@ -119,9 +120,11 @@ function Header() {
         <button className="w-full hover:bg-yellow-500 rounded-sm  font-semibold shadow-md mt-6 py-3 bg-slate-800 transition duration-400 text-white text-lg ">
           View cart
         </button>
-        <button className="w-full py-3.5 mt-4 hover:bg-yellow-500 font-semibold rounded-sm shadow-md bg-white outline-2 border transition duration-400 border-yellow-500  hover:text-white text-lg text-slate-800 ">
+
+        <Link href={'/Checkout'}> 
+        <button  className="w-full py-3.5 mt-4 hover:bg-yellow-500 font-semibold rounded-sm shadow-md bg-white outline-2 border transition duration-400 border-yellow-500  hover:text-white text-lg text-slate-800 ">
           Checkout
-        </button>
+        </button> </Link>
       </Drawer>
 
       <div className="bg-slate-900 h-24 py-0 top-0 sticky shadow-sm flex flex-row justify-between items-center">

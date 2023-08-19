@@ -5,7 +5,10 @@ import Navbar from "@/components/Header/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { Space, Table, Tag } from 'antd';
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromWishList} from '@/Redux/reducerSlice/products';
+import { removeFromWishList } from '@/Redux/reducerSlice/products';
+import { ToastContainer, toast } from "react-toastify";
+import Link from 'next/link';
+
 
 
 
@@ -16,16 +19,18 @@ import Image from 'next/image';
 const Wishlist = () => {
   const { wishList } = useSelector((state) => state.products);
   const dispatch = useDispatch();
-  
+
 
 
   return (
     <>
       <Header />
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className='w-full h-screen pb-52 flex flex-col px-12 items-center'>
-        <h1 className='text-4xl font-bold text-slate-800 text-center mt-16'>My wishList</h1>
+        <h1 className='text-4xl font-bold text-slate-800 text-center mt-16'>My Wishlist</h1>
+
+
         {/* <div className='flex  flex-col items-center justify-center'>
           <Image className='mt-4' src={'/empty.png'} width={'400'} height={'400'} />
 
@@ -86,9 +91,23 @@ const Wishlist = () => {
                             {/* <th scope="col" class=" px-6 py-4">Action</th> */}
                             <td class="whitespace-nowrap  px-6 py-4"><button onClick={() => {
                               dispatch(removeFromWishList(item));
+                              toast.error(`${item.title} removed from your wishlist`);
+
                             }} className='border font-semibold rounded-md text-red-500 hover:bg-red-500 hover:text-white border-red-500 px-4 py-1.5'>Remove</button>  </td>
 
                           </tr>
+                          <ToastContainer
+                            position="top-center"
+                            autoClose={2000}
+                            hideProgressBar={false}
+                            newestOnTop={false}
+                            closeOnClick
+                            rtl={false}
+                            pauseOnFocusLoss
+                            draggable
+                            pauseOnHover
+                            theme="light"
+                          />
                         </>
                       )
                     })}
@@ -115,6 +134,19 @@ const Wishlist = () => {
             </div>
           </div>
         </div>
+
+
+
+        <div className='flex items-center w-full px-12 gap-7 justify-end mt-16'>
+          <div>
+          <button className='text-red-500 text-md hover:scale-105 font-semibold '> Clear WishList</button>
+          </div>
+
+          <div>
+          <Link className='bg-slate-800 px-8 py-3 transition duration-300  ease-in-out hover:bg-yellow-500 text-lg font-semibold rounded-md text-white' href={''}> Go to Cart</Link>
+          </div>
+        </div>
+
 
 
       </div>
