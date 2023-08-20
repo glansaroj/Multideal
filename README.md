@@ -241,10 +241,65 @@ ____
 
 
 ## 📸 Screenshots
-Here is the screenshot of the sample home page of this project. Remaining parts will be updated as soon as the project will complete.
+Screenshots of some sample pages of this project are listed below. Remaining parts will be updated as soon as the project will complete.
 <details>
   <summary>
     ❖ Home Page
+  </summary>
+<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/screenshoots/Home%20%40MultiDeal.png'>
+
+  
+</details>
+
+<details>
+  <summary>
+    ❖ Login Page
+  </summary>
+<img  src=''>
+
+  
+</details>
+
+<details>
+  <summary>
+    ❖ Register Page
+  </summary>
+<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/Home%20%40MultiDeal.png'>
+
+  
+</details>
+
+<details>
+  <summary>
+    ❖ 404 Page
+  </summary>
+<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/Home%20%40MultiDeal.png'>
+
+  
+</details>
+
+
+<details>
+  <summary>
+    ❖ Wish List
+  </summary>
+<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/Home%20%40MultiDeal.png'>
+
+  
+</details>
+
+<details>
+  <summary>
+    ❖ Shopping Cart
+  </summary>
+<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/Home%20%40MultiDeal.png'>
+
+  
+</details>
+
+<details>
+  <summary>
+    ❖ Chackout 
   </summary>
 <img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/Home%20%40MultiDeal.png'>
 

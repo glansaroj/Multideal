@@ -113,7 +113,14 @@ function Header() {
         <div className="flex py-3 justify-between items-center">
           <h3 className="text-lg font-semibold text-slate-800">Subtotal:</h3>
           <h2 className="text-xl font-bold text-yellow-500">
-            Rs. {subTotal}/-{" "}
+            Rs. {subTotal}{" "}
+          </h2>
+        </div>
+
+        <div className="flex py-2 justify-between items-center">
+          <h3 className="text-lg font-semibold text-slate-800">Total Item:</h3>
+          <h2 className="text-xl font-bold text-yellow-500">
+             {cartList.length}{" "}
           </h2>
         </div>
 

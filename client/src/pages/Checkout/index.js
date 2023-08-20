@@ -108,7 +108,7 @@ const Checkout = () => {
                                 }}
                             >
                                 {({ errors, touched }) => (
-                                    <Form className="h-5/6 w-[650px] bg-gray-200 bg-opacity-30 rounded-md shadow-md py-10 my-3 px-7 mb-20">
+                                    <Form className="h-5/6 w-[650px] bg-gray-200 bg-opacity-30 border-2 rounded-md shadow-md py-10 my-3 px-7 mb-20">
                                         {/* <label for="firstName">First Name*</label> */}
 
                                         {/* SELLER INFO HERE */}
