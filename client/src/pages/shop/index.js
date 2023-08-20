@@ -69,7 +69,7 @@ const Shop = () => {
                             return <div className="flash  product flex  justify-between   mt-9">
 
                                 <div className="productbox flex-col" >
-                                    <div className=" h-[365px] w-[280px] hover:shadow-lg bg-white hover:outline hover:outline-yellow-500 hover:outline-1  transition duration-1000 ease-in-out cursor-pointer ">
+                                    <div className=" h-[365px] w-[280px] hover:shadow-xl bg-white hover:outline hover:outline-yellow-500 hover:outline-1  transition duration-1000 ease-in-out cursor-pointer ">
                                         {/* Heart & tag */}
                                         <div className="heart flex items-center justify-between mt-2 pt-3 px-3">
                                             <div className="tag bg-red-500 w-16 text-xs text-white rounded-lg   h-5 text-center ">Hot Sale</div>
@@ -97,7 +97,7 @@ const Shop = () => {
                                             width={380}
                                             height={380}
                                             srcset=""
-                                            className="-pt-5 hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                                            className="-pt-5  transition duration-300 ease-in-out cursor-pointer"
                                         />
 
                                         {/* Name & Price */}

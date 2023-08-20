@@ -142,13 +142,13 @@ Here is my ideal roadmap & features checklist for completing this project in a m
     - [X] Product listing pages
     - [ ] Product detail pages
     - [X] product categories 
-    - [ ] Checkout process
-    - [ ] User account pages
+    - [X] Checkout process
+    - [X] User account pages
 
 - [ ] II. Extra features & functionality:
      - [X] Product add by admin
      - [X] Add/delete items in cart 
-     - [ ] Add/Delete items in a wishlist
+     - [X] Add/Delete items in a wishlist
      - [ ] pagination
      - [ ] Product search functionality
      - [ ] product listing & deleting 
@@ -157,7 +157,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
      - [ ] basic stock mgt
      - [ ] proceed to checkout
      - [ ] Order tracking
-     - [ ] Product comparison
+     - [ ] Product Price comparison
      - [ ] Implemented multilingual features
      - [ ] Integrate Messenger chat Plugin
      - [ ] Admin panel & Dashboard with Data visualization 
@@ -174,7 +174,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
  - [ ] Develop RESTful API endpoints
  - [X] User authentication with MongoDB
  - [ ] Implement endpoints for auth, vendor/order management
- - [ ] Validate user credentials using MongoDB queries
+ - [X] Validate user credentials using MongoDB queries
  - [ ] Vendor management with MongoDB
  - [ ] Endpoints and queries for vendor, products, inventory, & orders
  - [ ] Backend Error handling

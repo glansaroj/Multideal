@@ -5,7 +5,15 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { useState } from 'react';
 import Link from 'next/link';
-import {CreditCardFilled, BankFilled, SafetyCertificateFilled } from '@ant-design/icons'
+import { CreditCardFilled, BankFilled, SafetyCertificateFilled, CloseOutlined } from '@ant-design/icons'
+import { useDispatch, useSelector } from "react-redux";
+import { Button, Modal, Space } from 'antd';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+
+
+
+
 
 
 
@@ -14,6 +22,7 @@ import {CreditCardFilled, BankFilled, SafetyCertificateFilled } from '@ant-desig
 
 
 const Checkout = () => {
+    const router = useRouter();
     const shopListingSchema = Yup.object().shape({
         FullName: Yup.string().required("Full Name is a required field"),
 
@@ -37,9 +46,33 @@ const Checkout = () => {
     });
 
 
+    const { cartList } = useSelector((state) => state.products);
+    let cartTotal = cartList.reduce((acc, item) => acc + item.price, 0);
+
+
+
     // Handle varification
     const handleSubmit = async (values) => {
         console.log(files);
+    };
+
+    const redirectToHome = () => {
+        router.push('/');
+        alert('Home')
+    }
+
+    const orderMade = () => {
+        Modal.success({
+            title: 'Congratulatins! Your order has been placed successfully.',
+            content: (
+                <div className='  items-center justify-center text-md text-slate-800 font-semibold'>
+                    <Image src={'/order1.png'} width={400} height={400} />
+                    <p>Your order is on the way for Delivery.</p>
+                    <p>Thank Your for shopping with MultiDeal.</p>
+                </div>
+            ),
+            onOk() { router.push('/')},
+        });
     };
 
 
@@ -201,7 +234,7 @@ const Checkout = () => {
                                             <div className='border gap-1 flex justify-between items-center px-4 py-1.5'> <SafetyCertificateFilled /> Cash on Delivery <span> <input type='radio'></input> </span></div>
 
 
-                                         </div>
+                                        </div>
 
 
 
@@ -229,69 +262,55 @@ const Checkout = () => {
                                 <h1 className='text-2xl font-bold  text-slate-800'> Your Order </h1>
                             </div>
 
-                            <div className='flex mt-3  text-lg  font-semibold slate-800 justify-between'>
+                            <div className='flex mt-3  text-lg  font-semibold text-slate-800 justify-between'>
                                 <div className='border-r '>
                                     Products
                                 </div>
 
                                 <div >
-                                    Total
-                                </div>
-                            </div>
-
-                            <div className='flex mt-2  text-gray-400   justify-between'>
-                                <div>
-                                    Hawkins Cooker * 1
-                                </div>
-
-                                <div>
-                                    Rs. 5000/-
-                                </div>
-                            </div>
-
-
-                            <div className='flex mt-2    text-gray-400 justify-between'>
-                                <div>
-                                    Hawkins Cooker * 1
-                                </div>
-
-                                <div>
-                                    Rs. 5000/-
-                                </div>
-
-                            </div>
-
-
-                            <div className='flex mt-2   text-gray-400 justify-between'>
-                                <div>
-                                    Hawkins Cooker * 1
-                                </div>
-
-                                <div>
-                                    Rs. 5000/-
+                                    Price
                                 </div>
                             </div>
 
 
 
-                            <div className='flex flex-col gap-2 mt-8 text-md border-t border-b py-4 font-semibold slate-800 justify-between'>
+
+
+                            {cartList.map((item) => {
+
+                                return (<div className='flex mt-2 text-sm text-slate-500 py-1  justify-between'>
+                                    <div className='flex items-center justify-between'>
+                                        ◈ {item.title} * 1
+                                    </div>
+
+                                    <div>
+                                        Rs. {item.price}
+                                    </div>
+                                </div>
+
+                                )
+                            })}
+
+
+
+                            <div className='flex flex-col gap-2 mt-6  border-t border-b py-4 text-sm font-semibold text-slate-800 justify-between'>
                                 <div className='flex justify-between '>
                                     <div>
-                                        Subtotal
+                                        Cart total
                                     </div>
 
                                     <div >
-                                        Rs. 15000/-
+                                        Rs. {cartTotal}
                                     </div>
                                 </div>
 
-                                <div className='flex justify-between '>
+                                <div className='flex  justify-between '>
                                     <div>
                                         Delivery Charge
                                     </div>
 
                                     <div >
-                                        Rs. 200/-
+                                        Rs. 250
                                     </div>
                                 </div>
 
@@ -301,40 +320,34 @@ const Checkout = () => {
                             </div>
 
                             {/* TOTAL */}
-                            <div className='text-yellow-500 text-xl font-semibold flex justify-between mt-4 '>
+                            <div className='text-yellow-500 text-xl font-semibold flex justify-between mt-3 '>
                                 <div>
                                     Grand Total
                                 </div>
 
                                 <div >
-                                    Rs. 15200/-
+                                    Rs. {cartTotal + 250}
                                 </div>
                             </div>
 
-                            <button className='bg-slate-800 w-full mt-12 rounded py-4 transition duration-500 ease-in-out hover:bg-yellow-500 font-semibold text-white '> Place Order</button>
+
+
+
+
+
+
+                            <button onClick={orderMade} className='bg-slate-800 w-full mt-12 rounded py-4 transition duration-500 ease-in-out hover:bg-yellow-500 font-semibold text-white '> Place Order</button>
 
 
                         </div>
-
-
-
-
-
                     </div>
-
-
-
-
-
-
                 </div>
-
-
-
-
-
             </div>
+
+
             <Footer />
+
+
         </>
 
     )
