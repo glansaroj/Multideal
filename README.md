@@ -244,7 +244,7 @@ ____
 Screenshots of some sample pages of this project are listed below. Remaining parts will be updated as soon as the project will complete.
 <details>
   <summary>
-    ❖ Home Page
+    ✓ Home Page
   </summary>
 <img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/screenshoots/Home%20%40MultiDeal.png'>
 
@@ -253,27 +253,27 @@ Screenshots of some sample pages of this project are listed below. Remaining par
 
 <details>
   <summary>
-    ❖ Login Page
+    ✓ Login Page
   </summary>
-<img  src=''>
+<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/screenshoots/Login.png'>
 
   
 </details>
 
 <details>
   <summary>
-    ❖ Register Page
+    ✓ Register Page
   </summary>
-<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/Home%20%40MultiDeal.png'>
+<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/screenshoots/register.png'>
 
   
 </details>
 
 <details>
   <summary>
-    ❖ 404 Page
+    ✓ 404 Page
   </summary>
-<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/Home%20%40MultiDeal.png'>
+<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/screenshoots/404.png'>
 
   
 </details>
@@ -281,27 +281,27 @@ Screenshots of some sample pages of this project are listed below. Remaining par
 
 <details>
   <summary>
-    ❖ Wish List
+    ✓ Wish List
   </summary>
-<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/Home%20%40MultiDeal.png'>
+<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/screenshoots/Wishlist.png'>
 
   
 </details>
 
 <details>
   <summary>
-    ❖ Shopping Cart
+    ✓ Shopping Cart
   </summary>
-<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/Home%20%40MultiDeal.png'>
+<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/screenshoots/CartList.png'>
 
   
 </details>
 
 <details>
   <summary>
-    ❖ Chackout 
+    ✓ Checkout 
   </summary>
-<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/Home%20%40MultiDeal.png'>
+<img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/screenshoots/Checkout.png'>
 
   
 </details>
