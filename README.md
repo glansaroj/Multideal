@@ -111,13 +111,12 @@ Here is my ideal roadmap & features checklist for completing this project in a m
     - [X] wireframes and mockups
     - [X] Flowchart / Diagram
 
-
-- [ ] III. UI & Layout
+- [X] III. UI & Layout
     - [X] Header
     - [X] Navigation bar
     - [X] Hero section 
     - [X] Main content area
-    - [ ] Sidebar
+    - [X] Sidebar
     - [X] Footer
 
 
@@ -140,7 +139,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
     - [X] Shopping cart
     - [X] Wishlist
     - [X] Product listing pages
-    - [ ] Product detail pages
+    - [X] Product detail pages
     - [X] product categories 
     - [X] Checkout process
     - [X] User account pages
@@ -171,7 +170,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
  - [X] Define entities [vendors, products, orders, customers, admin]
  - [X] MongoDB collections for diff. entities  
  - [X] Use Express.js for routing and middleware
- - [ ] Develop RESTful API endpoints
+ - [X] Develop RESTful API endpoints
  - [X] User authentication with MongoDB
  - [ ] Implement endpoints for auth, vendor/order management
  - [X] Validate user credentials using MongoDB queries
@@ -274,6 +273,15 @@ Screenshots of some sample pages of this project are listed below. Remaining par
     ✓ 404 Page
   </summary>
 <img  src='https://github.com/trulysaroj/Multideal/blob/master/client/src/assets/screenshoots/404.png'>
+
+  
+</details>
+
+<details>
+  <summary>
+    ✓ Product details
+  </summary>
+<img  src='client\src\assets\screenshoots\details.png'>
 
   
 </details>
