@@ -1,76 +1,98 @@
-import React from 'react'
-import Image from 'next/image';
+import React from "react";
+import { Carousel } from "antd";
+import Image from "next/image";
 
-// import Banner1 from 'src/public/Banner1.png'
 
 
+const contentStyle = {
+  height: "350px",
+  color: "#fff",
+  // lineHeight: "160px",
+  textAlign: "center",
+  background: "#364d79",
+};
 
 function Hero() {
   return (
     <>
-    <div className='mt-0 '>
-    <div className='banner  w-full'>
+      <div className="mt-0 ">
+        {/* <div className='banner  w-full'>
       < Image  src='/Banner1.png' width={1500}  height={630} />
 
-    </div>
-
-    {/* Features */}
-     {/* <div className='feature my-8  mt-20 flex justify-center'> */}
-
-    {/* <div className='w-11/12  flex justify-between border bg-white shadow-md px-7 items-center  h-32'> */}
-
-    {/* 1 */}
-    {/* <div className='free flex items-center gap-2.5'>
-    <div className='text-5xl text-yellow-500'> < AiOutlineShoppingCart /> </div>
-    <div>
-        <h1 className='text-md font-bold text-slate-900'>Free Shipping</h1>
-        <p className='text-gray-500 text-sm'>When ordering over $100</p>
-    </div>
     </div> */}
 
-  
-    {/* 2 */}
-       {/* <div className='free flex items-center gap-2.5'>
-    <div className='text-5xl text-yellow-500'> <AiOutlineSync /> </div>
-    <div>
-        <h1 className='text-md font-bold text-slate-900'>20 Days Return</h1>
-        <p className='text-gray-500 text-sm'>If goods have problems</p>
-    </div>
-    </div> */}
+        {/* CAROUSEL */}
+        <Carousel autoplay>
+          <div  className='banner  w-full'>
+            <Image
+              style={contentStyle}
+              src={"/Banner1.png"}
+              width={1500}
+              height={630}
+            />
+          </div>
+          <div  className='banner  w-full'>
+            <Image
+              style={contentStyle}
+              src={"/Banner2.png"}
+              width={1500}
+              height={630}
+            />
+          </div>
+          <div  className='banner  w-full'>
+            <Image
+              style={contentStyle}
+              src={"/Banner1.png"}
+              width={1500}
+              height={630}
+            />
+          </div>
+          <div>
+            <Image
+              style={contentStyle}
+              src={`/Banner2.png`}
+              width={1500}
+              height={630}
+            />
+          </div>
+          <div>
+            <Image
+              style={contentStyle}
+              src={"/Banner3.png"}
+              width={1500}
+              height={630}
+            />
+          </div>
+          <div>
+            <Image
+              style={contentStyle}
+              src={"/Banner4.png"}
+              width={1500}
+              height={630}
+            />
+          </div>
 
+          <div>
+            <Image
+              style={contentStyle}
+              src={"/Banner5.png"}
+              width={1500}
+              height={630}
+            />
+          </div>
 
-    {/* 3 */}
-      {/* <div className='free flex items-center gap-2.5'>
-    <div className='text-5xl text-yellow-500'> <AiOutlineSafety /> </div>
-    <div>
-        <h1 className='text-md font-bold text-slate-900'>Secure Payment</h1>
-        <p className='text-gray-500 text-sm'>100% secure payment</p>
-    </div>
-    </div> */}
-
-
-
-    
-    {/* 4 */}
-    {/* <div className='free flex items-center gap-2.5'>
-    <div className='text-5xl text-yellow-500'> <AiOutlineComment /> </div>
-    <div>
-        <h1 className='text-md font-bold text-slate-900'>24/7 Support</h1>
-        <p className='text-gray-500 text-sm'>Dedicated support</p>
-    </div>
-    </div> */}
-
-
-
-    {/* </div> */}
-
-    {/* </div>  */}
-
-    </div>
-
-
+          <div>
+            <Image
+              style={contentStyle}
+              src={"/Banner6.png"}
+              width={1500}
+              height={630}
+            />
+          </div>
+        </Carousel>
+      </div>
     </>
-  )
+  );
 }
 
 export default Hero;

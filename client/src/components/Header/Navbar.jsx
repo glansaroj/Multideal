@@ -1,5 +1,5 @@
 
-import React from 'react'
+
 import Link from 'next/link';
 
 import { AiOutlineRight } from "react-icons/ai";
@@ -132,6 +132,7 @@ const items = [
 
 
 function Navbar() {
+ 
   return (
     <div className=' border-t-white mt-0 py-2.5  top-24 sticky bg-slate-800 shadow-md text-white px-12 flex justify-between'>
     
@@ -163,7 +164,6 @@ function Navbar() {
 
     </div>
 
-    
 
     <div className='font-normal text-base gap-10'>
         <a className='' href=''>Home</a>

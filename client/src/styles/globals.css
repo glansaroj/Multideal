@@ -26,3 +26,11 @@ body {
     /* rgb(var(--background-start-rgb)); */
     background-color: #F3F4F6;
 }
+
+
+
+
+/* Override base SVG style to work with Ant Design if using external icon sets */
+svg {
+  vertical-align: initial;
+}

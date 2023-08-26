@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import React, { useState } from "react";
 import Search from "./Search";
 import Head from "next/head";
@@ -11,7 +9,6 @@ import {
   AiOutlineHeart,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
-
 import { CloseOutlined } from "@ant-design/icons";
 import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react";
 import Register from "@/pages/auth/Register";
@@ -21,13 +18,13 @@ import { useRouter } from "next/router";
 import { handleLogout } from "@/Redux/reducerSlice/users";
 import Navbar from "./Navbar";
 import Image from "next/image";
-// import Wishlist from "@/pages/wishlist";
 import { Drawer, Button } from "antd";
 import { removeFromCart} from '@/Redux/reducerSlice/products';
 
 
 // Header Components
 function Header() {
+
   const router = useRouter();
   const dispatch = useDispatch();
   const userLogout = () => {
@@ -58,7 +55,7 @@ function Header() {
 
   return (
     <>
-      {/* //TODO: Need to Fix this part ------????? */}
+      
       <Drawer
         title="SHOPPING CART"
         placement="right"
@@ -148,6 +145,7 @@ function Header() {
 
         <div className="search mr-76">
           <Search />
+         
         </div>
 
         {/* WISH LIST & CART */}

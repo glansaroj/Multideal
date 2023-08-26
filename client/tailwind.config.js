@@ -30,4 +30,10 @@ module.exports = {
     // },
   },
   plugins: [],
+  // corePlugins: {preflight: false},
+  theme: {
+    extend: {},
+  },
+ 
 }
+
