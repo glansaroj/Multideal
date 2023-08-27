@@ -5,7 +5,7 @@ import B1 from 'src/assets/B1.jpeg'
 import B2 from 'src/assets/B2.jpeg'
 import B3 from 'src/assets/B3.jpeg'
 
-const Banner = () => {
+const FootBanner = () => {
   return (
     <div className='flex justify-between gap-3 px-12 w-full mt-20 '>
         <div className=''> 
@@ -26,4 +26,4 @@ const Banner = () => {
   )
 }
 
-export default Banner
+export default FootBanner;

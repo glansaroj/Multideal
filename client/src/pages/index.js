@@ -9,12 +9,13 @@ import * as Yup from "yup";
 import Link from "next/link";
 import Navbar from '@/components/Header/Navbar';
 import Login from './auth/Login';
-import Hero from '@/components/Header/hero';
+import Banner from '@/components/Header/Banner';
 import Footer from '@/components/Footer/Footer';
 import FlashDeal from '@/components/Main/Flash Deal';
 import Catagories from '@/components/ProductCatagories/Catagories';
-import Banner from '@/components/Main/Banner';
+// import Banner from '@/components/Main/Banner';
 import Features from '@/components/Footer/Features';
+import FootBanner from '@/components/Main/Banner';
 // import Register from './auth/Register';
 
 
@@ -33,11 +34,11 @@ export default function Home() {
 
       <Header />
       <Navbar />
-      <Hero />
+      <Banner />
 
       <Catagories />
       <FlashDeal />
-      <Banner />
+      <FootBanner />
       <Features />
 
       
