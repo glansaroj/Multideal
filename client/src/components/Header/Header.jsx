@@ -80,7 +80,6 @@ function Header() {
                   <h1 className="text-slate-800 font-semibold text-lg">
                     {" "}
                     {item.title}
-                    {/* Hawkins */}
                   </h1>
                   <h2 className="text-yellow-500 text-md font-normal">
                     {item.price}
@@ -131,7 +130,7 @@ function Header() {
         </button> </Link>
       </Drawer>
 
-      <div className="bg-slate-900 h-24 py-0 top-0 sticky shadow-sm flex flex-row justify-between items-center">
+      <div className="bg-slate-900 h-24 py-0 top-0 sticky  z-50 shadow-sm flex flex-row justify-between items-center">
         <div className="logo">
           <a href="/">
             <Image

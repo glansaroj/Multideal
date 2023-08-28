@@ -1,5 +1,6 @@
 import React from "react";
-import Product from "../Product card/product";
+
+import productCard from "../Products/productCard";
 import Link from "next/link";
 
 function FlashDeal() {
@@ -24,11 +25,15 @@ function FlashDeal() {
       </div>
 
       <div className="flash product flex justify-between  flex-wrap mt-9">
-        <Product />
+        <productCard  />
+        <productCard  />
+        <productCard  />
+        <productCard  />
 
-        <Product />
-        <Product />
-        <Product />
+
+
+
+        
       </div>
     </div>
   );

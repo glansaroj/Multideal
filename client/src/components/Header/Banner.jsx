@@ -22,6 +22,7 @@ import Banner3 from "../../assets/Banner/Banner3.png";
 import Banner4 from "../../assets/Banner/Banner4.png";
 import Banner5 from "../../assets/Banner/Banner5.png";
 import Banner6 from "../../assets/Banner/Banner6.png";
+import Link from 'next/link';
 
 
 
@@ -52,22 +53,27 @@ function Banner() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide className='h-[700px]'>  <Image  src='/Banner1.png' width={1500}  height={630} /> 
+        <SwiperSlide className='h-[700px]'> <Link href={'/shop'}>   <Image  src='/Banner1.png' width={1500}  height={630} /> </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Image  src={Banner2} width={1500}  height={630} /> 
+        <Link href={'/shop'}> 
+        <Image  src={Banner2} width={1500}  height={630} /> </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Image  src={Banner3} width={1500}  height={630} /> 
+        <Link href={'/shop'}> 
+        <Image  src={Banner3} width={1500}  height={630} /> </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Image  src={Banner4} width={1500}  height={630} /> 
+        <Link href={'/shop'}> 
+        <Image  src={Banner4} width={1500}  height={630} /> </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Image  src={Banner5} width={1500}  height={630} /> 
+        <Link href={'/shop'}> 
+        <Image  src={Banner5} width={1500}  height={630} /> </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Image  src={Banner6}width={1500}  height={630} /> 
+        <Link href={'/shop'}> 
+        <Image  src={Banner6}width={1500}  height={630} /> </Link>
         </SwiperSlide>
         
       </Swiper>

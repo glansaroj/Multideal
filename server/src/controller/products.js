@@ -18,34 +18,70 @@ const addNewProducts = async (req, res) => {
 
 
 
-// Get all product --->
+// Get all products --->
 const getAllProducts = async (req, res) => {
-  // const data = await Products.find()
-  let data;
-
-  // for Search product
-  if (req.query.searchText) {
-    data = await Products.find({ productName: { $regex: req.query.searchText } }).limit(req.query.size).limit(10)
+  try {
+    const data = await Products.find();
+    const count = await Products.countDocuments();
+    if(data)  {
+      res.json({
+      data,
+      msg: 'success',
+      productsList: data,
+      count: count
+    })}
+    
+   
+  } catch (error) {
+    res.status(500).json({ error: 'Opps!, error occurred while fetching products.' });
   }
-  else if (req.query.size) {
-    data = await Products.find().limit(req.query.size).skip((req.query.page - 1) * req.query.size)
-  }
-  else {
-    data = await Products.find()
+};
 
-  }
 
-  const count = await Products.find().count()
-  if(data)  {
+
+// Get Searched products --->
+const getSearchProduct = async (req, res) => {
+  try {
+    const searchText = req.query.searchText;
+    const data = await Products.find({ productName: { $regex: searchText } }).limit(10);
+    
     res.json({
-    data,
-    msg: 'success',
-    productsList: data,
-    count: count
-  })}
-}
+      msg: 'success',
+      productsList: data,
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Opps, error occurred while searching products.' });
+  }
+};
 
 
+
+// Get all product --->
+// const getAllProducts = async (req, res) => {
+//   // let data = await Products.find()
+//   let data;
+
+//   // for Search product
+//   if (req.query.searchText) {
+//     data = await Products.find({ productName: { $regex: req.query.searchText  } }).limit(req.query.size).limit(10)
+//   }
+//   else if (req.query.size) {
+//     data = await Products.find().limit(req.query.size).skip((req.query.page - 1) * req.query.size)
+//   }
+//   else {
+//     data = await Products.find()
+
+//   }
+
+//   const count = await Products.find().count()
+//   if(data)  {
+    
+//     res.json({  
+//     msg: 'success',
+//     productsList: data,
+//     count: count
+//   })}
+// }
 
 
 
@@ -64,6 +100,7 @@ const getProductImageById = async (req, res) => {
   }
 
 }
+
 
 
 
@@ -88,7 +125,7 @@ const getProductsDetails = async (req, res) => {
 
 
 
-module.exports = { addNewProducts, getAllProducts, getProductImageById, getProductsDetails };
+module.exports = { addNewProducts, getAllProducts, getProductImageById, getProductsDetails, getSearchProduct };
 
 
 

@@ -149,10 +149,10 @@ Here is my ideal roadmap & features checklist for completing this project in a m
      - [X] Add/delete items in cart 
      - [X] Add/Delete items in a wishlist
      - [ ] pagination
-     - [ ] Product search functionality
+     - [X] Product search functionality
      - [ ] product listing & deleting 
      - [ ] user rating & feedback
-     - [ ] Filtering & sorting by price, brand etc.
+     - [X] Filtering & sorting by price, brand etc.
      - [ ] basic stock mgt
      - [ ] proceed to checkout
      - [ ] Order tracking

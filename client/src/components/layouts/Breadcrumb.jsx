@@ -2,7 +2,6 @@ import React from "react";
 import { Breadcrumb } from "antd";
 import { HomeOutlined } from "@ant-design/icons";
 
-
 const Breadcrumbed = () => {
   return (
     <div>
@@ -22,9 +21,7 @@ const Breadcrumbed = () => {
             href: "/404",
             title: (
               <>
-                <span className="text-slate-800 hover:text-yellow-500">
-                  404
-                </span>
+                <span className="text-slate-800 hover:text-yellow-500"> 404 </span>
               </>
             ),
           },

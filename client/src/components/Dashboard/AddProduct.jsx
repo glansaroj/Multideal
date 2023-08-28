@@ -9,9 +9,25 @@ import { useDispatch, useSelector } from 'react-redux';
 import { handleLogout } from "@/Redux/reducerSlice/users";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useState } from 'react';
 
 
 const Dashboard = () => {
+  const [file, setFile] = useState(null)
+
+  const handleAddProducts = (values) => {
+    const data = new FormData()
+    Object.entries(values).forEach((item) => {
+      data.append(item[0], item[1])
+    })
+    data.append('product', file)
+
+    fetch('http://localhost:5000/products',
+      {
+        method: 'POST',
+        body: data
+      })
+  }
 
     const addProductAlert = () => {
         toast.success('Product added successfully')

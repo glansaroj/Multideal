@@ -6,7 +6,7 @@ import {
   HeartOutlined,
 } from "@ant-design/icons";
 
-const Product = () => {
+const productCard = () => {
   return (
     <>
       <div className="productbox flex-col ">
@@ -64,4 +64,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default productCard;
