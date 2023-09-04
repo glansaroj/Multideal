@@ -154,7 +154,7 @@ const Shop = () => {
                                         <div className="w-[280px] bg-white text-black  border border-gray-300 rounded-lg group overflow-hidden    hover:outline hover:outline-yellow-400 hover:outline-1  transition duration-1000 ease-in-out">
                                             {/* Heart & tag */}
                                             <div className="heart flex items-center justify-between mt-1 pt-3 px-3">
-                                                <div className="tag bg-green-500 w-12 text-xs text-white rounded-lg   h-5 text-center ">New Product</div>
+                                                <div className="tag bg-green-500 w-12 text-xs text-white rounded-xl   h-5 text-center ">New Product</div>
 
                                                 <div onClick={() => {
                                                     // dispath(addToWishList({ ID: item._id, title: item.productName, price: item.price, image: 'http://localhost:5000/product-img/' + item._id }));
