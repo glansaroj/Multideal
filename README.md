@@ -132,7 +132,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
 
  #### Front-End Development:
 
-- [ ] I. Structure, Pages & navigation 
+- [X] I. Structure, Pages & navigation 
     - [X] Home page
     - [X] Login/signup pages
     - [X] vendor/ shop listing form
@@ -154,7 +154,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
      - [ ] user rating & feedback
      - [X] Filtering & sorting by price, brand etc.
      - [ ] basic stock mgt
-     - [ ] proceed to checkout
+     - [X] proceed to checkout
      - [ ] Order tracking
      - [ ] Product Price comparison
      - [ ] Implemented multilingual features
@@ -196,6 +196,25 @@ Here is my ideal roadmap & features checklist for completing this project in a m
 <details>
   <summary>
  (3) Demonstration (Testing)
+ - [ ] Create comprehensive test cases and scenarios.
+ - [ ] Execute test cases systematically.
+ - [ ] Record and track test results and defects.
+ - [ ] Perform unit tests for individual code components.
+ - [ ] Test the interactions between different system components.
+ - [ ] Ensure seamless data flow and functionality.
+ - [ ] RESTful API endpoints testing for accuracy and reliability.
+ - [ ] Validate input and output data.
+ - [ ] Verify JWT-based authentication functionality.
+ - [ ] Ensure user roles and access control are working correctly.
+ - [ ] Validate MongoDB interactions and queries.
+ - [ ] Test core functionality related to vendors, products, and orders.
+ - [ ] Ensure compatibility across various devices and screen sizes.
+ - [ ] Set up a stable demo environment.
+ - [ ] Document the testing process and results.
+ - [ ] Reflect the latest project state.
+ - [ ] Update project documentation with technical details.
+
+
   
     
   </summary>
@@ -205,6 +224,17 @@ Here is my ideal roadmap & features checklist for completing this project in a m
 <details>
   <summary>
     (4) Deployment
+ - [ ] Decide an appropriate hosting and deployment platform 
+      (e.g., Vercel, Netlify, AWS, Heroku etc.)
+ - [ ] Prepare the deployment environment.
+ - [ ] Configure server settings and security.
+ - [ ] Deploy the latest stable code version to the chosen platform.
+ - [ ] Set up a continuous integration/continuous deployment (CI/CD) pipeline.
+ - [ ] Conduct final user acceptance testing (UAT) in the live environment.
+ - [ ] Transition to full production mode.
+ - [ ] Monitor and resolve any production issues.
+ - [ ] Update project documentation with deployment-related information.
+ - [ ] Celebrate the successful deployment of the project !
   </summary>
 </details>
 
