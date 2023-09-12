@@ -55,22 +55,23 @@ MultiDeal, a multivendor E-commerce platform (project) powered with MERN stack, 
 
 ## 💻 Tech-stack 
 
-While crafting this project, I'll be using a wide range of awesome & cool modern tech-stacks which really excite me the most. Tech-stacks & libraries that will be used in this project are as follows:
+While crafting this project, I've used a wide range of  modern tech-stacks which really excite me the most. Tech-stacks & libraries that is used in this project are as follows:
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * ![Node](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 * ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 * ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-* Mongoose
-* Redux
-* Redux Toolkit 
-* Tailwind CSS
 * Ant Design
-* Chakra UI
-* Formik & Yup 
-* React Toastify
+* Tailwind CSS
+* Formik & Yup
+* Redux / Redux Toolkit
 * bcrypt & JWT
+* Mongoose
+* Multer 
+
+
+
 * & Many more ...
 
 
@@ -150,7 +151,7 @@ Here is my ideal roadmap & features checklist for completing this project in a m
      - [X] Add/Delete items in a wishlist
      - [ ] pagination
      - [X] Product search functionality
-     - [ ] product listing & deleting 
+     - [X] product listing & deleting 
      - [ ] user rating & feedback
      - [X] Filtering & sorting by price, brand etc.
      - [ ] basic stock mgt
@@ -172,18 +173,15 @@ Here is my ideal roadmap & features checklist for completing this project in a m
  - [X] Use Express.js for routing and middleware
  - [X] Develop RESTful API endpoints
  - [X] User authentication with MongoDB
- - [ ] Implement endpoints for auth, vendor/order management
  - [X] Validate user credentials using MongoDB queries
- - [ ] Vendor management with MongoDB
- - [ ] Endpoints and queries for vendor, products, inventory, & orders
  - [ ] Backend Error handling
  - [ ] Endpoints and queries for browsing, cart management
  - [ ] Search, Filter & pagination on backend
  - [ ] Order API for placement, tracking & fulfilment
  - [ ] Third-party integrations with MongoDB
+ - [ ] Implement access control, user authentication & encryption 
  - [ ] Integrate Payment gateways (Optional)
- - [ ] Implement access control, user authentication, and encryption 
- - [ ] Test API endpoints and MongoDB interactions
+
 
 
   
@@ -194,48 +192,42 @@ Here is my ideal roadmap & features checklist for completing this project in a m
 
 
 <details>
-  <summary>
- (3) Demonstration (Testing)
- - [ ] Create comprehensive test cases and scenarios.
+  <summary> (3) Demonstration (Testing) </summary>
+  
  - [ ] Execute test cases systematically.
- - [ ] Record and track test results and defects.
  - [ ] Perform unit tests for individual code components.
  - [ ] Test the interactions between different system components.
  - [ ] Ensure seamless data flow and functionality.
  - [ ] RESTful API endpoints testing for accuracy and reliability.
- - [ ] Validate input and output data.
  - [ ] Verify JWT-based authentication functionality.
  - [ ] Ensure user roles and access control are working correctly.
  - [ ] Validate MongoDB interactions and queries.
- - [ ] Test core functionality related to vendors, products, and orders.
  - [ ] Ensure compatibility across various devices and screen sizes.
  - [ ] Set up a stable demo environment.
  - [ ] Document the testing process and results.
- - [ ] Reflect the latest project state.
  - [ ] Update project documentation with technical details.
 
 
   
-    
-  </summary>
+ 
 </details>
 
 
 <details>
-  <summary>
-    (4) Deployment
+  <summary> (4) Deployment </summary>
+    
  - [ ] Decide an appropriate hosting and deployment platform 
+
       (e.g., Vercel, Netlify, AWS, Heroku etc.)
  - [ ] Prepare the deployment environment.
  - [ ] Configure server settings and security.
  - [ ] Deploy the latest stable code version to the chosen platform.
  - [ ] Set up a continuous integration/continuous deployment (CI/CD) pipeline.
- - [ ] Conduct final user acceptance testing (UAT) in the live environment.
  - [ ] Transition to full production mode.
  - [ ] Monitor and resolve any production issues.
  - [ ] Update project documentation with deployment-related information.
  - [ ] Celebrate the successful deployment of the project !
-  </summary>
+
 </details>
 
 <details>
@@ -270,7 +262,7 @@ ____
 
 
 ## 📸 Screenshots
-Screenshots of some sample pages of this project are listed below. Remaining parts will be updated as soon as the project will complete.
+Screenshots of some sample pages of this project are listed below. Remaining parts will be updated as soon as the project will fully complete.
 <details>
   <summary>
     ✓ Home Page
