@@ -400,9 +400,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 Have any doubts/queries & feedback regarding this project? <br>
   Leave your message here 👇
 
-Saroj Tamang - sarojt7475@gmail.com
+📩 Email: sarojt7475@gmail.com </br>
+🌐 Personal Website: <a href="https://trulysaroj.vercel.app">Website</a> 
 
-Project Link: - [MultiDeal: multivendor E-commerce platform](https://github.com/trulysaroj/Multideal)
 
 
 
