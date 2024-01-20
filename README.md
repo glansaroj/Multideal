@@ -10,7 +10,7 @@ MultiDeal, a multivendor E-commerce platform (project) powered with MERN stack, 
 
 
 
-<br> <br>
+<br> 
 
 
 ## 💻 Tech-stack 
@@ -33,15 +33,6 @@ While crafting this project, I've used the following cutting-edge technologies t
 
 
 <br>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -161,8 +152,6 @@ Here is my ideal roadmap & features checklist for completing this project in a m
  - [ ] Set up a continuous integration/continuous deployment (CI/CD) pipeline.
 
 
-
-
 </details>
 
 <details>
@@ -171,20 +160,18 @@ Here is my ideal roadmap & features checklist for completing this project in a m
   </summary>
   
  
-  <img src="https://github.com/trulysaroj/Multideal/blob/master/Workflow%20Diagram.png" alt="Workflow Diagram">
-
+  <img alt="Workflow Diagram" src="https://github.com/trulysaroj/Multideal/assets/123483889/5ea1f7e5-09bb-4417-9d47-3d7541e22535.png" alt="Workflow Diagram">
+  
 
     
-  ***<h3 align='center'> Fig-I: Multivendor E-commerce Workflow Diagram</h3>***  
+  ***<h3 align='center'> Fig: Multivendor E-commerce Workflow Diagram</h3>***  
   
 
 
-____   
+ 
 
 
-![image](https://github.com/trulysaroj/Multideal/blob/master/Login%20auth%20Diagram.png)
 
-  ***<h3 align='center'> Fig-II: Login Authorization</h3>***  
 
    
      
@@ -195,7 +182,7 @@ ____
 </details>
 
 
-<br> <br>
+<br> 
 
 ## 📸 Sample Pages Screenshots
 Screenshots of some sample pages of this project are listed below.
@@ -285,7 +272,7 @@ Below are screenshots of some sample pages from this project.
 
 
 
-<br> <br>
+<br> 
 
 <!-- GETTING STARTED -->
 ## 📃 Getting Started
@@ -348,7 +335,7 @@ npm run dev
 
 
 
-<br> <br>
+<br> 
 
 
 
